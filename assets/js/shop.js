@@ -241,6 +241,11 @@ class ShopManager {
     const inCart = cartItem ? true : false;
     const cartQuantity = cartItem ? cartItem.quantity : 0;
 
+    // Format price in EGP
+    const formatPrice = (price) => {
+      return `EGP ${price.toFixed(2)}`;
+    };
+
     return `
             <div class="${cardClass}" data-product-id="${product.id}">
                 ${product.featured ? `<span class="product-badge">${this.getTranslatedText("shop.badge.featured")}</span>` : ""}
@@ -277,11 +282,11 @@ class ShopManager {
                     <p class="product-description">${product.description}</p>
                     
                     <div class="product-price">
-                        <span class="current-price">$${product.price.toFixed(2)}</span>
+                        <span class="current-price">${formatPrice(product.price)}</span>
                         ${
                           product.originalPrice
                             ? `
-                            <span class="original-price">$${product.originalPrice.toFixed(2)}</span>
+                            <span class="original-price">${formatPrice(product.originalPrice)}</span>
                             <span class="discount">-${discount}%</span>
                         `
                             : ""
@@ -484,6 +489,11 @@ class ShopManager {
     const inCart = cartItem ? true : false;
     const cartQuantity = cartItem ? cartItem.quantity : 0;
 
+    // Format price in EGP
+    const formatPrice = (price) => {
+      return `EGP ${price.toFixed(2)}`;
+    };
+
     return `
             <div class="quick-view-grid">
                 <div class="quick-view-image">
@@ -515,11 +525,11 @@ class ShopManager {
                     <span class="product-category">${this.getCategoryName(product.category)}</span>
                     
                     <div class="product-price large">
-                        <span class="current-price">$${product.price.toFixed(2)}</span>
+                        <span class="current-price">${formatPrice(product.price)}</span>
                         ${
                           product.originalPrice
                             ? `
-                            <span class="original-price">$${product.originalPrice.toFixed(2)}</span>
+                            <span class="original-price">${formatPrice(product.originalPrice)}</span>
                             <span class="discount">-${discount}%</span>
                         `
                             : ""
@@ -704,12 +714,16 @@ class ShopManager {
     // Simulate API delay
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
+    // ============================================================
+    // ALL PRODUCTS ARE LEATHER WITH PRICES IN EGYPTIAN POUNDS (EGP)
+    // ============================================================
+
     return [
-      // ============ AZURA PRODUCTS (Jewelry/Leather Accessories) ============
+      // ============ AZURA - Leather Jewelry & Accessories ============
       {
         id: 1,
         name: "AZURA Handmade Leather Earrings - Gold",
-        category: "jewelry",
+        category: "leather",
         price: 850,
         originalPrice: 1200,
         image: "./assets/img/AZURA/AZURA 01.png",
@@ -722,7 +736,7 @@ class ShopManager {
       {
         id: 2,
         name: "AZURA Bohemian Leather Earrings - Silver",
-        category: "jewelry",
+        category: "leather",
         price: 850,
         originalPrice: 1200,
         image: "./assets/img/AZURA/AZURA 02.png",
@@ -734,21 +748,21 @@ class ShopManager {
       },
       {
         id: 3,
-        name: "AZURA Colorful Tassel Earrings",
-        category: "jewelry",
+        name: "AZURA Colorful Tassel Leather Earrings",
+        category: "leather",
         price: 750,
         originalPrice: 1000,
         image: "./assets/img/AZURA/AZURA 03.png",
-        description: "Vibrant colorful tassel earrings that add a pop of color to any outfit. Handcrafted with attention to detail.",
+        description: "Vibrant colorful tassel leather earrings that add a pop of color to any outfit. Handcrafted with attention to detail.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "tassel", "colorful", "jewelry", "azura"]
+        tags: ["earrings", "tassel", "colorful", "jewelry", "leather", "azura"]
       },
       {
         id: 4,
         name: "AZURA Geometric Leather Earrings",
-        category: "jewelry",
+        category: "leather",
         price: 950,
         originalPrice: 1350,
         image: "./assets/img/AZURA/AZURA 04.png",
@@ -760,8 +774,8 @@ class ShopManager {
       },
       {
         id: 5,
-        name: "AZURA Floral Design Earrings",
-        category: "jewelry",
+        name: "AZURA Floral Design Leather Earrings",
+        category: "leather",
         price: 800,
         originalPrice: 1100,
         image: "./assets/img/AZURA/AZURA 05.png",
@@ -774,11 +788,11 @@ class ShopManager {
       {
         id: 6,
         name: "AZURA Statement Leather Earrings",
-        category: "jewelry",
+        category: "leather",
         price: 1100,
         originalPrice: 1500,
         image: "./assets/img/AZURA/AZURA 06.png",
-        description: "Bold statement earrings that make a lasting impression. Perfect for special occasions.",
+        description: "Bold statement leather earrings that make a lasting impression. Perfect for special occasions.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
@@ -787,11 +801,11 @@ class ShopManager {
       {
         id: 7,
         name: "AZURA Elegance Leather Earrings",
-        category: "jewelry",
+        category: "leather",
         price: 900,
         originalPrice: 1250,
         image: "./assets/img/AZURA/AZURA 07.png",
-        description: "Elegant design earrings suitable for both casual and formal events.",
+        description: "Elegant design leather earrings suitable for both casual and formal events.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
@@ -799,8 +813,8 @@ class ShopManager {
       },
       {
         id: 8,
-        name: "AZURA Premium Collection Earrings",
-        category: "jewelry",
+        name: "AZURA Premium Collection Leather Earrings",
+        category: "leather",
         price: 1200,
         originalPrice: 1600,
         image: "./assets/img/AZURA/AZURA 08.png",
@@ -812,12 +826,12 @@ class ShopManager {
       },
       {
         id: 9,
-        name: "AZURA Delicate Chain Earrings",
-        category: "jewelry",
+        name: "AZURA Delicate Chain Leather Earrings",
+        category: "leather",
         price: 780,
         originalPrice: 1050,
         image: "./assets/img/AZURA/AZURA 09.png",
-        description: "Delicate chain detail earrings that combine leather with elegant chain elements.",
+        description: "Delicate chain detail leather earrings that combine leather with elegant chain elements.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
@@ -825,8 +839,8 @@ class ShopManager {
       },
       {
         id: 10,
-        name: "AZURA Modern Art Earrings",
-        category: "jewelry",
+        name: "AZURA Modern Art Leather Earrings",
+        category: "leather",
         price: 980,
         originalPrice: 1300,
         image: "./assets/img/AZURA/AZURA 10.png",
@@ -838,25 +852,25 @@ class ShopManager {
       },
       {
         id: 11,
-        name: "AZURA Traditional Egyptian Earrings",
-        category: "jewelry",
+        name: "AZURA Traditional Egyptian Leather Earrings",
+        category: "leather",
         price: 880,
         originalPrice: 1150,
         image: "./assets/img/AZURA/AZURA 11.png",
-        description: "Traditional Egyptian design earrings celebrating ancient heritage.",
+        description: "Traditional Egyptian design leather earrings celebrating ancient heritage.",
         featured: true,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "traditional", "egyptian", "heritage", "azura"]
+        tags: ["earrings", "traditional", "egyptian", "heritage", "leather", "azura"]
       },
       {
         id: 12,
         name: "AZURA Minimalist Leather Earrings",
-        category: "jewelry",
+        category: "leather",
         price: 700,
         originalPrice: 950,
         image: "./assets/img/AZURA/AZURA 12.png",
-        description: "Minimalist design for those who appreciate simple elegance.",
+        description: "Minimalist design leather earrings for those who appreciate simple elegance.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
@@ -864,12 +878,12 @@ class ShopManager {
       },
       {
         id: 13,
-        name: "AZURA Vintage Style Earrings",
-        category: "jewelry",
+        name: "AZURA Vintage Style Leather Earrings",
+        category: "leather",
         price: 820,
         originalPrice: 1080,
         image: "./assets/img/AZURA/AZURA 13.png",
-        description: "Vintage-inspired earrings with a timeless appeal.",
+        description: "Vintage-inspired leather earrings with a timeless appeal.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
@@ -877,86 +891,86 @@ class ShopManager {
       },
       {
         id: 14,
-        name: "AZURA Festival Collection Earrings",
-        category: "jewelry",
+        name: "AZURA Festival Collection Leather Earrings",
+        category: "leather",
         price: 890,
         originalPrice: 1180,
         image: "./assets/img/AZURA/AZURA 14.png",
-        description: "Perfect for festivals and celebrations, these earrings are sure to turn heads.",
+        description: "Perfect for festivals and celebrations, these leather earrings are sure to turn heads.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "festival", "colorful", "celebration", "azura"]
+        tags: ["earrings", "festival", "colorful", "celebration", "leather", "azura"]
       },
       {
         id: 15,
-        name: "AZURA Artisan Signature Earrings",
-        category: "jewelry",
+        name: "AZURA Artisan Signature Leather Earrings",
+        category: "leather",
         price: 1300,
         originalPrice: 1700,
         image: "./assets/img/AZURA/AZURA 15.png",
-        description: "Signature piece from AZURA's master artisans. Each pair is uniquely crafted.",
+        description: "Signature piece from AZURA's master artisans. Each pair is uniquely crafted from premium leather.",
         featured: true,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "signature", "artisan", "premium", "azura"]
+        tags: ["earrings", "signature", "artisan", "premium", "leather", "azura"]
       },
       {
         id: 16,
-        name: "AZURA Etsy Special Edition Earrings",
-        category: "jewelry",
+        name: "AZURA Etsy Special Edition Leather Earrings",
+        category: "leather",
         price: 950,
         originalPrice: 1250,
         image: "./assets/img/AZURA/freepik__-etsy-__91115.png",
-        description: "Special edition earrings created exclusively for Etsy collectors.",
+        description: "Special edition leather earrings created exclusively for Etsy collectors.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "etsy", "special-edition", "collector", "azura"]
+        tags: ["earrings", "etsy", "special-edition", "collector", "leather", "azura"]
       },
       {
         id: 17,
         name: "AZURA Limited Edition Leather Earrings",
-        category: "jewelry",
+        category: "leather",
         price: 1400,
         originalPrice: 1850,
         image: "./assets/img/AZURA/freepik__-etsy-__91116.png",
-        description: "Limited edition piece - only a few available. Premium craftsmanship.",
+        description: "Limited edition piece - only a few available. Premium leather craftsmanship.",
         featured: true,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "limited-edition", "premium", "exclusive", "azura"]
+        tags: ["earrings", "limited-edition", "premium", "exclusive", "leather", "azura"]
       },
       {
         id: 18,
-        name: "AZURA Summer Collection Earrings",
-        category: "jewelry",
+        name: "AZURA Summer Collection Leather Earrings",
+        category: "leather",
         price: 780,
         originalPrice: 1020,
         image: "./assets/img/AZURA/freepik__-etsy-__91117.png",
-        description: "Bright and cheerful earrings perfect for summer days.",
+        description: "Bright and cheerful leather earrings perfect for summer days.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "summer", "bright", "cheerful", "azura"]
+        tags: ["earrings", "summer", "bright", "cheerful", "leather", "azura"]
       },
       {
         id: 19,
-        name: "AZURA Winter Elegance Earrings",
-        category: "jewelry",
+        name: "AZURA Winter Elegance Leather Earrings",
+        category: "leather",
         price: 850,
         originalPrice: 1120,
         image: "./assets/img/AZURA/freepik__-etsy-__91118.png",
-        description: "Elegant winter-themed earrings that add warmth to any outfit.",
+        description: "Elegant winter-themed leather earrings that add warmth to any outfit.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "winter", "elegant", "warm", "azura"]
+        tags: ["earrings", "winter", "elegant", "warm", "leather", "azura"]
       },
       {
         id: 20,
-        name: "AZURA Pearl Accent Earrings",
-        category: "jewelry",
+        name: "AZURA Pearl Accent Leather Earrings",
+        category: "leather",
         price: 1050,
         originalPrice: 1400,
         image: "./assets/img/AZURA/freepik__-etsy-__91119.png",
@@ -968,8 +982,8 @@ class ShopManager {
       },
       {
         id: 21,
-        name: "AZURA Crystal Embellished Earrings",
-        category: "jewelry",
+        name: "AZURA Crystal Embellished Leather Earrings",
+        category: "leather",
         price: 1150,
         originalPrice: 1550,
         image: "./assets/img/AZURA/freepik__-etsy-__91120.png",
@@ -977,378 +991,127 @@ class ShopManager {
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "crystal", "sparkling", "premium", "azura"]
+        tags: ["earrings", "crystal", "sparkling", "premium", "leather", "azura"]
       },
       {
         id: 22,
-        name: "AZURA Nature Inspired Earrings",
-        category: "jewelry",
+        name: "AZURA Nature Inspired Leather Earrings",
+        category: "leather",
         price: 820,
         originalPrice: 1080,
         image: "./assets/img/AZURA/frepik__-etsy-__91121.png",
-        description: "Nature-inspired designs featuring leaf and floral motifs.",
+        description: "Nature-inspired designs featuring leaf and floral motifs on leather.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "nature", "floral", "leaf", "azura"]
+        tags: ["earrings", "nature", "floral", "leaf", "leather", "azura"]
       },
       {
         id: 23,
-        name: "AZURA Abstract Art Earrings",
-        category: "jewelry",
+        name: "AZURA Abstract Art Leather Earrings",
+        category: "leather",
         price: 920,
         originalPrice: 1220,
         image: "./assets/img/AZURA/freepik__-etsy-__91122.png",
-        description: "Abstract art inspired earrings for the creative soul.",
+        description: "Abstract art inspired leather earrings for the creative soul.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "abstract", "art", "creative", "azura"]
+        tags: ["earrings", "abstract", "art", "creative", "leather", "azura"]
       },
       {
         id: 24,
-        name: "AZURA Glamour Collection Earrings",
-        category: "jewelry",
+        name: "AZURA Glamour Collection Leather Earrings",
+        category: "leather",
         price: 1250,
         originalPrice: 1650,
         image: "./assets/img/AZURA/freepik__-etsy-__91123.png",
-        description: "Glamorous earrings for special occasions and red carpet events.",
+        description: "Glamorous leather earrings for special occasions and red carpet events.",
         featured: true,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "glamour", "special-occasion", "red-carpet", "azura"]
+        tags: ["earrings", "glamour", "special-occasion", "red-carpet", "leather", "azura"]
       },
       {
         id: 25,
-        name: "AZURA Everyday Essentials Earrings",
-        category: "jewelry",
+        name: "AZURA Everyday Essentials Leather Earrings",
+        category: "leather",
         price: 680,
         originalPrice: 900,
         image: "./assets/img/AZURA/freepik__-etsy-__91124.png",
-        description: "Perfect for everyday wear - comfortable and stylish.",
+        description: "Perfect for everyday wear - comfortable and stylish leather earrings.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "everyday", "essential", "comfortable", "azura"]
+        tags: ["earrings", "everyday", "essential", "comfortable", "leather", "azura"]
       },
       {
         id: 26,
-        name: "AZURA Travel Collection Earrings",
-        category: "jewelry",
+        name: "AZURA Travel Collection Leather Earrings",
+        category: "leather",
         price: 790,
         originalPrice: 1050,
         image: "./assets/img/AZURA/freepik__-etsy-__91125.png",
-        description: "Lightweight and durable earrings perfect for travelers.",
+        description: "Lightweight and durable leather earrings perfect for travelers.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "travel", "lightweight", "durable", "azura"]
+        tags: ["earrings", "travel", "lightweight", "durable", "leather", "azura"]
       },
       {
         id: 27,
-        name: "AZURA Boho Chic Earrings",
-        category: "jewelry",
+        name: "AZURA Boho Chic Leather Earrings",
+        category: "leather",
         price: 870,
         originalPrice: 1150,
         image: "./assets/img/AZURA/freepik__-etsy-__91126.png",
-        description: "Bohemian chic style for the free-spirited fashionista.",
+        description: "Bohemian chic style leather earrings for the free-spirited fashionista.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "boho", "chic", "bohemian", "azura"]
+        tags: ["earrings", "boho", "chic", "bohemian", "leather", "azura"]
       },
       {
         id: 28,
-        name: "AZURA Royal Collection Earrings",
-        category: "jewelry",
+        name: "AZURA Royal Collection Leather Earrings",
+        category: "leather",
         price: 1450,
         originalPrice: 1900,
         image: "./assets/img/AZURA/freepik__-etsy-__91127.png",
-        description: "Royal-inspired design fit for a queen. Truly majestic.",
+        description: "Royal-inspired design fit for a queen. Truly majestic leather earrings.",
         featured: true,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "royal", "majestic", "luxury", "azura"]
+        tags: ["earrings", "royal", "majestic", "luxury", "leather", "azura"]
       },
       {
         id: 29,
-        name: "AZURA Celestial Earrings",
-        category: "jewelry",
+        name: "AZURA Celestial Leather Earrings",
+        category: "leather",
         price: 980,
         originalPrice: 1280,
         image: "./assets/img/AZURA/freepik__-etsy-__91128.png",
-        description: "Celestial themed earrings featuring stars and moon motifs.",
+        description: "Celestial themed leather earrings featuring stars and moon motifs.",
         featured: false,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "celestial", "stars", "moon", "azura"]
+        tags: ["earrings", "celestial", "stars", "moon", "leather", "azura"]
       },
       {
         id: 30,
-        name: "AZURA Heritage Collection Earrings",
-        category: "jewelry",
+        name: "AZURA Heritage Collection Leather Earrings",
+        category: "leather",
         price: 1100,
         originalPrice: 1450,
         image: "./assets/img/AZURA/freepik__-etsy-__91129.png",
-        description: "Celebrating Egyptian heritage through contemporary design.",
+        description: "Celebrating Egyptian heritage through contemporary leather design.",
         featured: true,
         inStock: true,
         artisan: "AZURA Atelier",
-        tags: ["earrings", "heritage", "egyptian", "contemporary", "azura"]
+        tags: ["earrings", "heritage", "egyptian", "contemporary", "leather", "azura"]
       },
 
-      // ============ BAST PRODUCTS (Pottery/Ceramics) ============
-      {
-        id: 31,
-        name: "BAST Handcrafted Ceramic Vase - Blue",
-        category: "pottery",
-        price: 1800,
-        originalPrice: 2400,
-        image: "./assets/img/Bast/Bast 01.jpeg",
-        description: "Beautiful handcrafted ceramic vase in stunning blue tones. Perfect for home decor.",
-        featured: true,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["vase", "ceramic", "pottery", "home-decor", "blue", "bast"]
-      },
-      {
-        id: 32,
-        name: "BAST Decorative Plate - Traditional Pattern",
-        category: "pottery",
-        price: 1200,
-        originalPrice: 1600,
-        image: "./assets/img/Bast/Bast 02.jpeg",
-        description: "Traditional Egyptian patterned decorative plate. Hand-painted by master artisans.",
-        featured: false,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["plate", "ceramic", "decorative", "traditional", "bast"]
-      },
-      {
-        id: 33,
-        name: "BAST Ceramic Bowl - Earth Tones",
-        category: "pottery",
-        price: 900,
-        originalPrice: 1200,
-        image: "./assets/img/Bast/Bast 03.jpeg",
-        description: "Warm earth-toned ceramic bowl, perfect for serving or display.",
-        featured: false,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["bowl", "ceramic", "earth-tones", "serving", "bast"]
-      },
-      {
-        id: 34,
-        name: "BAST Artisan Mug - Hand Painted",
-        category: "pottery",
-        price: 650,
-        originalPrice: 850,
-        image: "./assets/img/Bast/Bast 04 1.jpeg",
-        description: "Hand-painted ceramic mug with unique Egyptian designs.",
-        featured: false,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["mug", "ceramic", "hand-painted", "drinkware", "bast"]
-      },
-      {
-        id: 35,
-        name: "BAST Ceramic Vase Set",
-        category: "pottery",
-        price: 3200,
-        originalPrice: 4200,
-        image: "./assets/img/Bast/Bast 05.jpeg",
-        description: "Set of three coordinating ceramic vases in different sizes.",
-        featured: true,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["vase-set", "ceramic", "set", "home-decor", "bast"]
-      },
-      {
-        id: 36,
-        name: "BAST Decorative Bowl - Large",
-        category: "pottery",
-        price: 1500,
-        originalPrice: 2000,
-        image: "./assets/img/Bast/Bast 06.jpeg",
-        description: "Large decorative bowl with intricate hand-painted details.",
-        featured: false,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["bowl", "decorative", "large", "hand-painted", "bast"]
-      },
-      {
-        id: 37,
-        name: "BAST Ceramic Planter - Modern",
-        category: "pottery",
-        price: 1100,
-        originalPrice: 1450,
-        image: "./assets/img/Bast/Bast 07.jpeg",
-        description: "Modern ceramic planter for your favorite houseplants.",
-        featured: false,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["planter", "ceramic", "modern", "plants", "bast"]
-      },
-      {
-        id: 38,
-        name: "BAST Wall Art - Ceramic",
-        category: "pottery",
-        price: 2200,
-        originalPrice: 2900,
-        image: "./assets/img/Bast/Bast 08.jpeg",
-        description: "Beautiful ceramic wall art piece to enhance any room.",
-        featured: true,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["wall-art", "ceramic", "decor", "art", "bast"]
-      },
-      {
-        id: 39,
-        name: "BAST Tea Set - Ceramic",
-        category: "pottery",
-        price: 2800,
-        originalPrice: 3600,
-        image: "./assets/img/Bast/Bast 09.png",
-        description: "Complete ceramic tea set with teapot and cups. Traditional design.",
-        featured: true,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["tea-set", "ceramic", "teapot", "cups", "traditional", "bast"]
-      },
-      {
-        id: 40,
-        name: "BAST Ceramic Coaster Set",
-        category: "pottery",
-        price: 450,
-        originalPrice: 600,
-        image: "./assets/img/Bast/Bast 10 1.jpeg",
-        description: "Set of 4 ceramic coasters with Egyptian motifs.",
-        featured: false,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["coasters", "ceramic", "set", "tableware", "bast"]
-      },
-      {
-        id: 41,
-        name: "BAST Ornamental Plate - Gold Accent",
-        category: "pottery",
-        price: 1350,
-        originalPrice: 1800,
-        image: "./assets/img/Bast/Bast 11.jpeg",
-        description: "Ornamental plate with elegant gold accents. Perfect for display.",
-        featured: false,
-        inStock: true,
-        artisan: "BAST Ceramics",
-        tags: ["plate", "ornamental", "gold-accent", "display", "bast"]
-      },
-
-      // ============ MERAKY PRODUCTS (Rugs & Textiles) ============
-      {
-        id: 42,
-        name: "MERAKY Handwoven Wool Rug - Traditional",
-        category: "rugs",
-        price: 4500,
-        originalPrice: 6000,
-        image: "./assets/img/MERAKY/ERAKY 01.jpeg",
-        description: "Beautiful handwoven wool rug with traditional Egyptian patterns. Durable and warm.",
-        featured: true,
-        inStock: true,
-        artisan: "MERAKY Textiles",
-        tags: ["rug", "wool", "handwoven", "traditional", "meraky"]
-      },
-      {
-        id: 43,
-        name: "MERAKY Kilim Runner - Geometric",
-        category: "rugs",
-        price: 2800,
-        originalPrice: 3700,
-        image: "./assets/img/MERAKY/ERAKY 02.jpg",
-        description: "Geometric patterned kilim runner perfect for hallways.",
-        featured: false,
-        inStock: true,
-        artisan: "MERAKY Textiles",
-        tags: ["kilim", "runner", "geometric", "hallway", "meraky"]
-      },
-      {
-        id: 44,
-        name: "MERAKY Cotton Throw Blanket",
-        category: "cotton",
-        price: 1200,
-        originalPrice: 1600,
-        image: "./assets/img/MERAKY/ERAKY 03 1.jpeg",
-        description: "Soft Egyptian cotton throw blanket. Perfect for cozy evenings.",
-        featured: false,
-        inStock: true,
-        artisan: "MERAKY Textiles",
-        tags: ["blanket", "cotton", "throw", "egyptian-cotton", "meraky"]
-      },
-      {
-        id: 45,
-        name: "MERAKY Bohemian Tapestry",
-        category: "rugs",
-        price: 1900,
-        originalPrice: 2500,
-        image: "./assets/img/MERAKY/freepik__-etsy-__91134.png",
-        description: "Beautiful bohemian style tapestry for wall hanging or floor covering.",
-        featured: true,
-        inStock: true,
-        artisan: "MERAKY Textiles",
-        tags: ["tapestry", "bohemian", "wall-hanging", "meraky"]
-      },
-      {
-        id: 46,
-        name: "MERAKY Prayer Rug - Traditional",
-        category: "rugs",
-        price: 850,
-        originalPrice: 1100,
-        image: "./assets/img/MERAKY/freepik__-etsy-__91135.png",
-        description: "Traditional prayer rug with intricate designs. Portable and lightweight.",
-        featured: false,
-        inStock: true,
-        artisan: "MERAKY Textiles",
-        tags: ["prayer-rug", "traditional", "portable", "meraky"]
-      },
-      {
-        id: 47,
-        name: "MERAKY Cushion Cover Set",
-        category: "cotton",
-        price: 650,
-        originalPrice: 850,
-        image: "./assets/img/MERAKY/freepik__-etsy-__91136.png",
-        description: "Set of 2 embroidered cushion covers in Egyptian cotton.",
-        featured: false,
-        inStock: true,
-        artisan: "MERAKY Textiles",
-        tags: ["cushion-cover", "cotton", "embroidered", "set", "meraky"]
-      },
-      {
-        id: 48,
-        name: "MERAKY Round Rug - Boho Style",
-        category: "rugs",
-        price: 3200,
-        originalPrice: 4200,
-        image: "./assets/img/MERAKY/freepik__-etsy-__91137.png",
-        description: "Round boho-style rug perfect for living rooms or bedrooms.",
-        featured: true,
-        inStock: true,
-        artisan: "MERAKY Textiles",
-        tags: ["round-rug", "boho", "living-room", "bedroom", "meraky"]
-      },
-      {
-        id: 49,
-        name: "MERAKY Table Runner - Embroidered",
-        category: "cotton",
-        price: 550,
-        originalPrice: 720,
-        image: "./assets/img/MERAKY/freepik__-etsy-__91138.png",
-        description: "Beautifully embroidered table runner for special occasions.",
-        featured: false,
-        inStock: true,
-        artisan: "MERAKY Textiles",
-        tags: ["table-runner", "embroidered", "cotton", "table-linen", "meraky"]
-      },
-
-      // ============ LAILA PRODUCTS (Leather) ============
+      // ============ LAILA - Premium Leather Goods ============
       {
         id: 50,
         name: "LAILA Premium Leather Tote Bag",
@@ -1356,7 +1119,7 @@ class ShopManager {
         price: 3750,
         originalPrice: 4500,
         image: "./assets/img/LAILA/LAILA 01 1.png",
-        description: "Spacious premium leather tote bag perfect for daily use. Made from high-quality leather.",
+        description: "Spacious premium leather tote bag perfect for daily use. Made from high-quality genuine leather.",
         featured: true,
         inStock: true,
         artisan: "LAILA Design",
@@ -1369,7 +1132,7 @@ class ShopManager {
         price: 2250,
         originalPrice: 2800,
         image: "./assets/img/LAILA/LAILA 02.png",
-        description: "Elegant leather crossbody bag with adjustable strap.",
+        description: "Elegant leather crossbody bag with adjustable strap. Crafted from premium leather.",
         featured: false,
         inStock: true,
         artisan: "LAILA Design",
@@ -1382,7 +1145,7 @@ class ShopManager {
         price: 1250,
         originalPrice: 1600,
         image: "./assets/img/LAILA/LAILA 03.png",
-        description: "Slim bifold leather wallet with multiple card slots.",
+        description: "Slim bifold leather wallet with multiple card slots. Made from genuine leather.",
         featured: false,
         inStock: true,
         artisan: "LAILA Design",
@@ -1395,7 +1158,7 @@ class ShopManager {
         price: 4200,
         originalPrice: 5200,
         image: "./assets/img/LAILA/LAILA 04.png",
-        description: "Stylish leather backpack combining fashion and functionality.",
+        description: "Stylish leather backpack combining fashion and functionality. Premium leather construction.",
         featured: true,
         inStock: true,
         artisan: "LAILA Design",
@@ -1408,7 +1171,7 @@ class ShopManager {
         price: 800,
         originalPrice: 1050,
         image: "./assets/img/LAILA/LAILA 05.png",
-        description: "Premium leather belt with brass buckle.",
+        description: "Premium leather belt with brass buckle. Made from high-quality leather.",
         featured: false,
         inStock: true,
         artisan: "LAILA Design",
@@ -1421,7 +1184,7 @@ class ShopManager {
         price: 1950,
         originalPrice: 2500,
         image: "./assets/img/LAILA/LAILA 06.png",
-        description: "Elegant leather clutch for evening events and special occasions.",
+        description: "Elegant leather clutch for evening events and special occasions. Genuine leather.",
         featured: true,
         inStock: true,
         artisan: "LAILA Design",
@@ -1434,14 +1197,14 @@ class ShopManager {
         price: 650,
         originalPrice: 850,
         image: "./assets/img/LAILA/LAILA 07.png",
-        description: "Minimalist leather card holder for essential cards.",
+        description: "Minimalist leather card holder for essential cards. Premium leather construction.",
         featured: false,
         inStock: true,
         artisan: "LAILA Design",
         tags: ["card-holder", "minimalist", "leather", "essential", "laila"]
       },
 
-      // ============ RANO PRODUCTS (Leather) ============
+      // ============ RANO - Natural Leather Goods ============
       {
         id: 57,
         name: "RANO Natural Leather Messenger Bag",
@@ -1449,7 +1212,7 @@ class ShopManager {
         price: 3000,
         originalPrice: 3800,
         image: "./assets/img/Rano/RANO 01 1.png",
-        description: "Classic messenger bag crafted from natural leather.",
+        description: "Classic messenger bag crafted from natural leather. Durable and stylish.",
         featured: true,
         inStock: true,
         artisan: "RANO Atelier",
@@ -1462,7 +1225,7 @@ class ShopManager {
         price: 550,
         originalPrice: 720,
         image: "./assets/img/Rano/RANO 02 1.jpeg",
-        description: "Handcrafted leather journal cover for standard notebooks.",
+        description: "Handcrafted leather journal cover for standard notebooks. Genuine leather.",
         featured: false,
         inStock: true,
         artisan: "RANO Atelier",
@@ -1475,14 +1238,14 @@ class ShopManager {
         price: 350,
         originalPrice: 450,
         image: "./assets/img/Rano/RANO 03 1.jpeg",
-        description: "Simple yet elegant leather keychain.",
+        description: "Simple yet elegant leather keychain. Made from premium leather.",
         featured: false,
         inStock: true,
         artisan: "RANO Atelier",
         tags: ["keychain", "leather", "accessory", "simple", "rano"]
       },
 
-      // ============ ROSE PRODUCTS (Leather Accessories) ============
+      // ============ ROSE - Leather Accessories ============
       {
         id: 60,
         name: "ROSE Leather Handbag - Classic",
@@ -1490,7 +1253,7 @@ class ShopManager {
         price: 3300,
         originalPrice: 4000,
         image: "./assets/img/Rose/ROSE 01.png",
-        description: "Classic leather handbag from ROSE collection.",
+        description: "Classic leather handbag from ROSE collection. Premium quality leather.",
         featured: true,
         inStock: true,
         artisan: "ROSE Collection",
@@ -1503,7 +1266,7 @@ class ShopManager {
         price: 400,
         originalPrice: 550,
         image: "./assets/img/Rose/ROSE 02 1.png",
-        description: "Delicate leather bracelet with rose gold accents.",
+        description: "Delicate leather bracelet with rose gold accents. Genuine leather.",
         featured: false,
         inStock: true,
         artisan: "ROSE Collection",
@@ -1516,7 +1279,7 @@ class ShopManager {
         price: 600,
         originalPrice: 800,
         image: "./assets/img/Rose/ROSE 03 1.png",
-        description: "Protective leather case for glasses or sunglasses.",
+        description: "Protective leather case for glasses or sunglasses. Premium leather.",
         featured: false,
         inStock: true,
         artisan: "ROSE Collection",
@@ -1529,7 +1292,7 @@ class ShopManager {
         price: 400,
         originalPrice: 550,
         image: "./assets/img/Rose/ROSE 04.jpeg",
-        description: "Compact leather key holder with multiple rings.",
+        description: "Compact leather key holder with multiple rings. Genuine leather.",
         featured: false,
         inStock: true,
         artisan: "ROSE Collection",
@@ -1542,7 +1305,7 @@ class ShopManager {
         price: 3750,
         originalPrice: 4600,
         image: "./assets/img/Rose/ROSE 05.jpeg",
-        description: "Spacious leather tote bag perfect for shopping or daily use.",
+        description: "Spacious leather tote bag perfect for shopping or daily use. Premium leather.",
         featured: true,
         inStock: true,
         artisan: "ROSE Collection",
@@ -1555,7 +1318,7 @@ class ShopManager {
         price: 550,
         originalPrice: 750,
         image: "./assets/img/Rose/ROSE 06.jpeg",
-        description: "Elegant leather passport holder for travelers.",
+        description: "Elegant leather passport holder for travelers. Made from genuine leather.",
         featured: false,
         inStock: true,
         artisan: "ROSE Collection",
@@ -1568,7 +1331,7 @@ class ShopManager {
         price: 1950,
         originalPrice: 2500,
         image: "./assets/img/Rose/ROSE 07.jpeg",
-        description: "Compact crossbody bag for essentials.",
+        description: "Compact crossbody bag for essentials. Premium leather construction.",
         featured: false,
         inStock: true,
         artisan: "ROSE Collection",
@@ -1581,7 +1344,7 @@ class ShopManager {
         price: 450,
         originalPrice: 600,
         image: "./assets/img/Rose/ROSE 08.jpeg",
-        description: "Versatile leather pouch for cosmetics or small items.",
+        description: "Versatile leather pouch for cosmetics or small items. Genuine leather.",
         featured: false,
         inStock: true,
         artisan: "ROSE Collection",
@@ -1594,7 +1357,7 @@ class ShopManager {
         price: 500,
         originalPrice: 680,
         image: "./assets/img/Rose/ROSE 09.jpeg",
-        description: "Leather phone case with card holder slot.",
+        description: "Leather phone case with card holder slot. Premium leather protection.",
         featured: false,
         inStock: true,
         artisan: "ROSE Collection",
@@ -1607,15 +1370,57 @@ class ShopManager {
         price: 580,
         originalPrice: 780,
         image: "./assets/img/Rose/ROSE 10.jpeg",
-        description: "Stylish leather makeup bag for organizing cosmetics.",
+        description: "Stylish leather makeup bag for organizing cosmetics. Genuine leather.",
         featured: false,
         inStock: true,
         artisan: "ROSE Collection",
         tags: ["makeup-bag", "leather", "cosmetics", "organizer", "rose"]
+      },
+
+      // ============ Additional Leather Products from Other Collections ============
+      {
+        id: 70,
+        name: "BAST Leather-Trimmed Ceramic Vase",
+        category: "leather",
+        price: 1600,
+        originalPrice: 2000,
+        image: "./assets/img/Bast/Bast 01.jpeg",
+        description: "Beautiful ceramic vase with elegant leather trim details. A unique blend of materials.",
+        featured: false,
+        inStock: true,
+        artisan: "BAST Ceramics",
+        tags: ["vase", "ceramic", "leather-trim", "home-decor", "bast"]
+      },
+      {
+        id: 71,
+        name: "MERAKY Leather-Embellished Textile Art",
+        category: "leather",
+        price: 2200,
+        originalPrice: 2800,
+        image: "./assets/img/MERAKY/ERAKY 01.jpeg",
+        description: "Beautiful textile art piece with premium leather embellishments.",
+        featured: false,
+        inStock: true,
+        artisan: "MERAKY Textiles",
+        tags: ["textile-art", "leather-embellished", "wall-art", "meraky"]
+      },
+      {
+        id: 72,
+        name: "MERAKY Leather-Trimmed Cushion Cover",
+        category: "leather",
+        price: 750,
+        originalPrice: 950,
+        image: "./assets/img/MERAKY/freepik__-etsy-__91136.png",
+        description: "Luxurious cushion cover with elegant leather trim detailing.",
+        featured: false,
+        inStock: true,
+        artisan: "MERAKY Textiles",
+        tags: ["cushion-cover", "leather-trim", "luxury", "meraky"]
       }
     ];
   }
 
+  // Rest of the class methods remain the same...
   setupEventListeners() {
     // Search functionality
     document
@@ -1687,21 +1492,21 @@ class ShopManager {
       );
     }
 
-    // Apply price filter
+    // Apply price filter (in EGP)
     if (this.filters.price !== "all") {
       filtered = filtered.filter((product) => {
         const price = product.price;
         switch (this.filters.price) {
-          case "0-50":
-            return price <= 50;
-          case "50-100":
-            return price > 50 && price <= 100;
-          case "100-200":
-            return price > 100 && price <= 200;
-          case "200-500":
-            return price > 200 && price <= 500;
-          case "500+":
-            return price > 500;
+          case "0-500":
+            return price <= 500;
+          case "500-1000":
+            return price > 500 && price <= 1000;
+          case "1000-2000":
+            return price > 1000 && price <= 2000;
+          case "2000-5000":
+            return price > 2000 && price <= 5000;
+          case "5000+":
+            return price > 5000;
           default:
             return true;
         }
@@ -1883,7 +1688,7 @@ class ShopManager {
     if (this.filters.price !== "all") {
       filtersHTML += `
                 <div class="filter-tag">
-                    Price: ${this.filters.price}
+                    Price: ${this.filters.price} EGP
                     <button class="remove" onclick="shopManager.removeFilter('price')">&times;</button>
                 </div>
             `;

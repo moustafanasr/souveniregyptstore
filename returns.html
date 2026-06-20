@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns & Exchanges - SOUVENIR Egyptian Handcrafts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/returns.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">SOUVENIR EGYPT.STORE</span>
+                    <span class="logo-subtitle">Authentic Handcrafts</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" data-key="nav.home" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" data-key="nav.collections" class="nav-link">Collections</a></li>
+                    <li><a href="artisans.html" data-key="nav.artisans" class="nav-link">Artisans</a></li>
+                    <li><a href="about.html" data-key="nav.about" class="nav-link">About</a></li>
+                    <li><a href="contact.html" data-key="nav.contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Language Switcher -->
+                <div class="language-switcher-dropdown">
+                    <button class="language-btn" id="languageToggle">
+                        <span class="current-lang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <button class="lang-option active" data-lang="en">
+                            <span class="lang-flag">🇺🇸</span>
+                            <span class="lang-text">English</span>
+                        </button>
+                        <button class="lang-option" data-lang="it">
+                            <span class="lang-flag">🇮🇹</span>
+                            <span class="lang-text">Italiano</span>
+                        </button>
+                        <button class="lang-option" data-lang="fr">
+                            <span class="lang-flag">🇫🇷</span>
+                            <span class="lang-text">Français</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- User Account -->
+                <div class="user-dropdown">
+                    <button class="user-btn" id="userToggle">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="user-menu" id="userMenu">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="user-details">
+                                <span class="user-name">Welcome Guest</span>
+                                <span class="user-status">Sign in to your account</span>
+                            </div>
+                        </div>
+                        <div class="user-actions">
+                            <a href="login.html" class="user-action-btn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span data-key="nav.login">Login</span>
+                            </a>
+                            <a href="register.html" class="user-action-btn">
+                                <i class="fas fa-user-plus"></i>
+                                <span data-key="nav.register">Register</span>
+                            </a>
+                            <a href="my-account.html" class="user-action-btn" style="display: none;" id="profileLink">
+                                <i class="fas fa-user-edit"></i>
+                                <span data-key="nav.profile">My Profile</span>
+                            </a>
+                            <a href="my-orders.html" class="user-action-btn" style="display: none;" id="ordersLink">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span data-key="nav.orders">My Orders</span>
+                            </a>
+                            <button class="user-action-btn logout-btn" style="display: none;" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span data-key="nav.logout">Logout</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shopping Cart -->
+                <div class="cart-dropdown">
+                    <button class="cart-btn" id="cartToggle">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <div class="cart-preview" id="cartPreview">
+                        <div class="cart-header">
+                            <h4 data-key="nav.cart">Shopping Cart</h4>
+                            <span class="cart-items-count">0 items</span>
+                        </div>
+                        <div class="cart-items" id="cartItems">
+                            <div class="empty-cart">
+                                <i class="fas fa-shopping-bag"></i>
+                                <p data-key="nav.emptyCart">Your cart is empty</p>
+                            </div>
+                        </div>
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                <span data-key="nav.total">Total:</span>
+                                <span class="total-amount">$0.00</span>
+                            </div>
+                            <div class="cart-actions">
+                                <a href="cart.html" class="btn btn-secondary" data-key="nav.viewCart">View Cart</a>
+                                <a href="checkout.html" class="btn btn-primary" data-key="nav.checkout">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Returns Hero Section -->
+    <section class="returns-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-key="returns.hero.title">Returns & Exchanges</h1>
+                <p data-key="returns.hero.subtitle">We want you to love your purchase. If you're not completely satisfied, we're here to help.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Returns Policy -->
+    <section class="returns-policy">
+        <div class="container">
+            <div class="policy-grid">
+                <div class="policy-main">
+                    <h2 data-key="returns.policy.title">Our Returns Policy</h2>
+                    <p data-key="returns.policy.intro">At SOUVENIR Egypt, we stand behind the quality and authenticity of every product we sell. Your satisfaction is our priority, and we want you to be completely happy with your purchase.</p>
+                    
+                    <div class="policy-section">
+                        <h3 data-key="returns.policy.timeframe">Return Timeframe</h3>
+                        <p data-key="returns.policy.timeframe.desc">You have <strong>30 days</strong> from the date of delivery to return your item for a full refund or exchange. Items must be returned in their original condition, unworn, unwashed, and with all original tags and packaging intact.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3 data-key="returns.policy.condition">Return Conditions</h3>
+                        <ul class="condition-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-key="returns.policy.condition1">Items must be returned within 30 days of delivery</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-key="returns.policy.condition2">Items must be in their original, unused condition</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-key="returns.policy.condition3">All original tags and packaging must be included</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-key="returns.policy.condition4">Custom or personalized items cannot be returned unless damaged</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-key="returns.policy.condition5">Return shipping costs are the responsibility of the customer unless the item is defective</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3 data-key="returns.policy.exchanges">Exchanges</h3>
+                        <p data-key="returns.policy.exchanges.desc">If you would like to exchange your item for a different size, color, or style, please initiate a return and place a new order. This ensures the fastest processing time and guarantees availability of your desired item.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3 data-key="returns.policy.refunds">Refunds</h3>
+                        <p data-key="returns.policy.refunds.desc">Once we receive and inspect your return, we will process your refund within 5-7 business days. Refunds will be issued to the original payment method used for the purchase. You will receive a confirmation email once your refund has been processed.</p>
+                    </div>
+                </div>
+
+                <div class="policy-sidebar">
+                    <div class="sidebar-card">
+                        <h4 data-key="returns.sidebar.quick">Quick Help</h4>
+                        <ul class="quick-links">
+                            <li>
+                                <a href="#process">
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span data-key="returns.sidebar.process">Return Process</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#faq">
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span data-key="returns.sidebar.faq">Frequently Asked Questions</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.html">
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span data-key="returns.sidebar.contact">Contact Support</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="shipping-info.html">
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span data-key="returns.sidebar.shipping">Shipping Information</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card contact-card">
+                        <h4 data-key="returns.sidebar.need-help">Need Help?</h4>
+                        <p data-key="returns.sidebar.help-text">Our customer service team is here to assist you with any questions about returns or exchanges.</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>returns@souveniregypt.store</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+20 123 456 7890</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <span data-key="returns.sidebar.hours">Mon-Fri: 9:00 AM - 6:00 PM (Cairo Time)</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary" data-key="returns.sidebar.contact-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Return Process -->
+    <section class="return-process" id="process">
+        <div class="container">
+            <h2 class="section-title" data-key="returns.process.title">How to Return an Item</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-key="returns.process.step1.title">Initiate Return</h3>
+                        <p data-key="returns.process.step1.desc">Contact our customer service team to initiate your return. Provide your order number and the reason for return. We'll guide you through the process and provide you with a return authorization.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-key="returns.process.step2.title">Pack Your Item</h3>
+                        <p data-key="returns.process.step2.desc">Carefully pack your item in its original packaging, including all tags and accessories. Ensure the item is well-protected for shipping to prevent damage during transit.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-key="returns.process.step3.title">Ship Your Return</h3>
+                        <p data-key="returns.process.step3.desc">Ship your return using a trackable shipping method to our returns address. Keep your tracking number for reference. Return shipping costs are the responsibility of the customer.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-key="returns.process.step4.title">Receive Your Refund</h3>
+                        <p data-key="returns.process.step4.desc">Once we receive and inspect your return, we'll process your refund within 5-7 business days. You'll receive a confirmation email and the refund will appear on your original payment method.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="returns-faq" id="faq">
+        <div class="container">
+            <h2 class="section-title" data-key="returns.faq.title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" data-key="returns.faq.q1">
+                        <span>How long do I have to return an item?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" data-key="returns.faq.a1">
+                        <p>You have 30 days from the date of delivery to return your item for a full refund or exchange. Items must be returned in their original condition with all tags and packaging intact.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-key="returns.faq.q2">
+                        <span>Who pays for return shipping?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" data-key="returns.faq.a2">
+                        <p>Return shipping costs are the responsibility of the customer, unless the item is defective, damaged, or if we made a mistake with your order. In these cases, we will provide a prepaid return shipping label.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-key="returns.faq.q3">
+                        <span>How long does it take to process a refund?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" data-key="returns.faq.a3">
+                        <p>Once we receive and inspect your return, we will process your refund within 5-7 business days. The refund will be credited to your original payment method. You will receive a confirmation email once the refund has been processed.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-key="returns.faq.q4">
+                        <span>Can I exchange an item?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" data-key="returns.faq.a4">
+                        <p>Yes, you can exchange an item for a different size, color, or style. We recommend initiating a return and placing a new order to ensure the fastest processing time and availability of your desired item.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-key="returns.faq.q5">
+                        <span>What if my item is damaged or defective?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" data-key="returns.faq.a5">
+                        <p>If your item arrives damaged or defective, please contact us immediately within 48 hours of delivery. We will arrange for a replacement or full refund at no additional cost to you. Please provide photos of the damage to expedite the process.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-key="returns.faq.q6">
+                        <span>Can I return a custom or personalized item?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" data-key="returns.faq.a6">
+                        <p>Custom and personalized items are final sale and cannot be returned unless they are damaged or defective. Please carefully review all customization details before placing your order to ensure you are satisfied with the design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="returns-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-key="returns.cta.title">Still Have Questions?</h2>
+                <p data-key="returns.cta.desc">Our friendly customer service team is ready to help you with any questions or concerns about returns and exchanges.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary" data-key="returns.cta.contact">Contact Us</a>
+                    <a href="shop.html" class="btn btn-secondary" data-key="returns.cta.shop">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SOUVENIR EGYPT</h3>
+                    <p data-key="footer.description">Bringing authentic Egyptian handcrafts to the world. Each piece tells a story of heritage, craftsmanship, and timeless beauty.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.shop">SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=jewelry" data-key="categories.jewelry">Jewelry</a></li>
+                        <li><a href="shop.html?category=pottery" data-key="categories.pottery">Pottery</a></li>
+                        <li><a href="shop.html?category=leather" data-key="categories.leather">Leather Products</a></li>
+                        <li><a href="shop.html?category=rugs" data-key="categories.rugs">Rugs & Kilims</a></li>
+                        <li><a href="shop.html?category=cotton" data-key="categories.cotton">Egyptian Cotton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.help">HELP</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping-info.html" data-key="footer.shipping">Shipping Information</a></li>
+                        <li><a href="returns.html" data-key="footer.returns">Returns & Exchanges</a></li>
+                        <li><a href="size-guide.html" data-key="footer.size">Size Guide</a></li>
+                        <li><a href="faq.html" data-key="footer.faq">FAQs</a></li>
+                        <li><a href="contact.html" data-key="footer.contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.contact">CONTACT</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+                        <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@souveniregypt.store</li>
+                    </ul>
+                    <h3 style="margin-top: 1.5rem;" data-key="footer.payment">PAYMENT METHODS</h3>
+                    <div class="payment-methods">
+                        <div class="payment-icon"><i class="fab fa-cc-visa"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-mastercard"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-paypal"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Souvenir Egypt.Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/language-switcher-returns.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/returns.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

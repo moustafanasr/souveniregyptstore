@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Guide - SOUVENIR Egyptian Handcrafts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/size-guide.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">SOUVENIR EGYPT.STORE</span>
+                    <span class="logo-subtitle">Authentic Handcrafts</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" data-key="nav.home" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" data-key="nav.collections" class="nav-link">Collections</a></li>
+                    <li><a href="artisans.html" data-key="nav.artisans" class="nav-link">Artisans</a></li>
+                    <li><a href="about.html" data-key="nav.about" class="nav-link">About</a></li>
+                    <li><a href="contact.html" data-key="nav.contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Language Switcher -->
+                <div class="language-switcher-dropdown">
+                    <button class="language-btn" id="languageToggle">
+                        <span class="current-lang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <button class="lang-option active" data-lang="en">
+                            <span class="lang-flag">🇺🇸</span>
+                            <span class="lang-text">English</span>
+                        </button>
+                        <button class="lang-option" data-lang="it">
+                            <span class="lang-flag">🇮🇹</span>
+                            <span class="lang-text">Italiano</span>
+                        </button>
+                        <button class="lang-option" data-lang="fr">
+                            <span class="lang-flag">🇫🇷</span>
+                            <span class="lang-text">Français</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- User Account -->
+                <div class="user-dropdown">
+                    <button class="user-btn" id="userToggle">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="user-menu" id="userMenu">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="user-details">
+                                <span class="user-name">Welcome Guest</span>
+                                <span class="user-status">Sign in to your account</span>
+                            </div>
+                        </div>
+                        <div class="user-actions">
+                            <a href="login.html" class="user-action-btn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span data-key="nav.login">Login</span>
+                            </a>
+                            <a href="register.html" class="user-action-btn">
+                                <i class="fas fa-user-plus"></i>
+                                <span data-key="nav.register">Register</span>
+                            </a>
+                            <a href="my-account.html" class="user-action-btn" style="display: none;" id="profileLink">
+                                <i class="fas fa-user-edit"></i>
+                                <span data-key="nav.profile">My Profile</span>
+                            </a>
+                            <a href="my-orders.html" class="user-action-btn" style="display: none;" id="ordersLink">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span data-key="nav.orders">My Orders</span>
+                            </a>
+                            <button class="user-action-btn logout-btn" style="display: none;" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span data-key="nav.logout">Logout</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shopping Cart -->
+                <div class="cart-dropdown">
+                    <button class="cart-btn" id="cartToggle">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <div class="cart-preview" id="cartPreview">
+                        <div class="cart-header">
+                            <h4 data-key="nav.cart">Shopping Cart</h4>
+                            <span class="cart-items-count">0 items</span>
+                        </div>
+                        <div class="cart-items" id="cartItems">
+                            <div class="empty-cart">
+                                <i class="fas fa-shopping-bag"></i>
+                                <p data-key="nav.emptyCart">Your cart is empty</p>
+                            </div>
+                        </div>
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                <span data-key="nav.total">Total:</span>
+                                <span class="total-amount">$0.00</span>
+                            </div>
+                            <div class="cart-actions">
+                                <a href="cart.html" class="btn btn-secondary" data-key="nav.viewCart">View Cart</a>
+                                <a href="checkout.html" class="btn btn-primary" data-key="nav.checkout">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Size Guide Hero Section -->
+    <section class="size-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-key="size.hero.title">Size Guide</h1>
+                <p data-key="size.hero.subtitle">Find the perfect fit for your authentic Egyptian handcrafts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Size Guide Navigation -->
+    <section class="size-nav">
+        <div class="container">
+            <div class="nav-tabs">
+                <button class="tab-btn active" data-tab="jewelry" data-key="size.tabs.jewelry">
+                    <i class="fas fa-gem"></i> Jewelry
+                </button>
+                <button class="tab-btn" data-tab="leather" data-key="size.tabs.leather">
+                    <i class="fas fa-cut"></i> Leather
+                </button>
+                <button class="tab-btn" data-tab="pottery" data-key="size.tabs.pottery">
+                    <i class="fas fa-mortar-pestle"></i> Pottery
+                </button>
+                <button class="tab-btn" data-tab="rugs" data-key="size.tabs.rugs">
+                    <i class="fas fa-carpet"></i> Rugs
+                </button>
+                <button class="tab-btn" data-tab="cotton" data-key="size.tabs.cotton">
+                    <i class="fas fa-tshirt"></i> Cotton
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jewelry Size Guide -->
+    <section class="size-section active" id="jewelry">
+        <div class="container">
+            <div class="size-content">
+                <h2 data-key="size.jewelry.title">Jewelry Size Guide</h2>
+                <p data-key="size.jewelry.intro">Find the perfect fit for rings, bracelets, and necklaces with our comprehensive jewelry size guide.</p>
+
+                <div class="size-grid">
+                    <!-- Ring Size Chart -->
+                    <div class="size-card">
+                        <h3 data-key="size.jewelry.rings.title">Ring Size Chart</h3>
+                        <p data-key="size.jewelry.rings.desc">Measure the circumference of your finger to find your ring size.</p>
+                        <div class="table-responsive">
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th data-key="size.jewelry.rings.size">Size</th>
+                                        <th data-key="size.jewelry.rings.circumference">Circumference (mm)</th>
+                                        <th data-key="size.jewelry.rings.diameter">Diameter (mm)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>5</td><td>49.3</td><td>15.7</td></tr>
+                                    <tr><td>6</td><td>51.8</td><td>16.5</td></tr>
+                                    <tr><td>7</td><td>54.4</td><td>17.3</td></tr>
+                                    <tr><td>8</td><td>56.9</td><td>18.1</td></tr>
+                                    <tr><td>9</td><td>59.5</td><td>18.9</td></tr>
+                                    <tr><td>10</td><td>62.1</td><td>19.8</td></tr>
+                                    <tr><td>11</td><td>64.6</td><td>20.6</td></tr>
+                                    <tr><td>12</td><td>67.2</td><td>21.4</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="size-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-key="size.jewelry.rings.tip">Tip: Measure your finger at the end of the day when it's at its largest.</span>
+                        </div>
+                    </div>
+
+                    <!-- Bracelet Size Chart -->
+                    <div class="size-card">
+                        <h3 data-key="size.jewelry.bracelets.title">Bracelet Size Chart</h3>
+                        <p data-key="size.jewelry.bracelets.desc">Measure your wrist circumference to find the perfect bracelet fit.</p>
+                        <div class="table-responsive">
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th data-key="size.jewelry.bracelets.size">Size</th>
+                                        <th data-key="size.jewelry.bracelets.wrist">Wrist (cm)</th>
+                                        <th data-key="size.jewelry.bracelets.length">Length (cm)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>XS</td><td>14-15</td><td>17-18</td></tr>
+                                    <tr><td>S</td><td>15-16</td><td>18-19</td></tr>
+                                    <tr><td>M</td><td>16-17</td><td>19-20</td></tr>
+                                    <tr><td>L</td><td>17-18</td><td>20-21</td></tr>
+                                    <tr><td>XL</td><td>18-19</td><td>21-22</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="size-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-key="size.jewelry.bracelets.tip">Tip: Add 1-2 cm to your wrist measurement for a comfortable fit.</span>
+                        </div>
+                    </div>
+
+                    <!-- Necklace Length Guide -->
+                    <div class="size-card">
+                        <h3 data-key="size.jewelry.necklaces.title">Necklace Length Guide</h3>
+                        <p data-key="size.jewelry.necklaces.desc">Choose the perfect necklace length for your style and neckline.</p>
+                        <div class="necklace-guide">
+                            <div class="necklace-item">
+                                <div class="necklace-visual" style="height: 60px;">
+                                    <div class="necklace-line" style="top: 10px;"></div>
+                                </div>
+                                <div class="necklace-info">
+                                    <span class="necklace-name" data-key="size.jewelry.necklaces.choker">Choker</span>
+                                    <span class="necklace-length">35-40 cm</span>
+                                    <span class="necklace-desc" data-key="size.jewelry.necklaces.choker.desc">Sits high on the neck</span>
+                                </div>
+                            </div>
+                            <div class="necklace-item">
+                                <div class="necklace-visual" style="height: 80px;">
+                                    <div class="necklace-line" style="top: 20px;"></div>
+                                </div>
+                                <div class="necklace-info">
+                                    <span class="necklace-name" data-key="size.jewelry.necklaces.collarbone">Collarbone</span>
+                                    <span class="necklace-length">40-45 cm</span>
+                                    <span class="necklace-desc" data-key="size.jewelry.necklaces.collarbone.desc">Rests at the collarbone</span>
+                                </div>
+                            </div>
+                            <div class="necklace-item">
+                                <div class="necklace-visual" style="height: 100px;">
+                                    <div class="necklace-line" style="top: 30px;"></div>
+                                </div>
+                                <div class="necklace-info">
+                                    <span class="necklace-name" data-key="size.jewelry.necklaces.princess">Princess</span>
+                                    <span class="necklace-length">45-50 cm</span>
+                                    <span class="necklace-desc" data-key="size.jewelry.necklaces.princess.desc">Rests below collarbone</span>
+                                </div>
+                            </div>
+                            <div class="necklace-item">
+                                <div class="necklace-visual" style="height: 120px;">
+                                    <div class="necklace-line" style="top: 40px;"></div>
+                                </div>
+                                <div class="necklace-info">
+                                    <span class="necklace-name" data-key="size.jewelry.necklaces.matiinee">Matinee</span>
+                                    <span class="necklace-length">50-60 cm</span>
+                                    <span class="necklace-desc" data-key="size.jewelry.necklaces.matiinee.desc">Rests at the bust</span>
+                                </div>
+                            </div>
+                            <div class="necklace-item">
+                                <div class="necklace-visual" style="height: 140px;">
+                                    <div class="necklace-line" style="top: 50px;"></div>
+                                </div>
+                                <div class="necklace-info">
+                                    <span class="necklace-name" data-key="size.jewelry.necklaces.rope">Rope</span>
+                                    <span class="necklace-length">60-70 cm</span>
+                                    <span class="necklace-desc" data-key="size.jewelry.necklaces.rope.desc">Rests below the bust</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leather Size Guide -->
+    <section class="size-section" id="leather">
+        <div class="container">
+            <div class="size-content">
+                <h2 data-key="size.leather.title">Leather Products Size Guide</h2>
+                <p data-key="size.leather.intro">Find the perfect fit for leather bags, belts, and accessories.</p>
+
+                <div class="size-grid">
+                    <!-- Bag Size Guide -->
+                    <div class="size-card">
+                        <h3 data-key="size.leather.bags.title">Bag Size Guide</h3>
+                        <p data-key="size.leather.bags.desc">Choose the right bag size for your needs.</p>
+                        <div class="table-responsive">
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th data-key="size.leather.bags.type">Type</th>
+                                        <th data-key="size.leather.bags.dimensions">Dimensions (cm)</th>
+                                        <th data-key="size.leather.bags.suitable">Suitable For</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-key="size.leather.bags.clutch">Clutch</td>
+                                        <td>20 x 15 x 5</td>
+                                        <td data-key="size.leather.bags.clutch.suitable">Phone, cards, keys</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.leather.bags.crossbody">Crossbody</td>
+                                        <td>25 x 20 x 10</td>
+                                        <td data-key="size.leather.bags.crossbody.suitable">Daily essentials</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.leather.bags.tote">Tote</td>
+                                        <td>35 x 30 x 15</td>
+                                        <td data-key="size.leather.bags.tote.suitable">Work, shopping</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.leather.bags.backpack">Backpack</td>
+                                        <td>40 x 30 x 20</td>
+                                        <td data-key="size.leather.bags.backpack.suitable">Travel, daily use</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Belt Size Guide -->
+                    <div class="size-card">
+                        <h3 data-key="size.leather.belts.title">Belt Size Guide</h3>
+                        <p data-key="size.leather.belts.desc">Find your belt size based on your waist measurement.</p>
+                        <div class="table-responsive">
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th data-key="size.leather.belts.size">Size</th>
+                                        <th data-key="size.leather.belts.waist">Waist (cm)</th>
+                                        <th data-key="size.leather.belts.length">Belt Length (cm)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>S</td><td>70-80</td><td>90-100</td></tr>
+                                    <tr><td>M</td><td>80-90</td><td>100-110</td></tr>
+                                    <tr><td>L</td><td>90-100</td><td>110-120</td></tr>
+                                    <tr><td>XL</td><td>100-110</td><td>120-130</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="size-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-key="size.leather.belts.tip">Tip: Measure your waist where you normally wear your belt.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pottery Size Guide -->
+    <section class="size-section" id="pottery">
+        <div class="container">
+            <div class="size-content">
+                <h2 data-key="size.pottery.title">Pottery Size Guide</h2>
+                <p data-key="size.pottery.intro">Choose the right pottery pieces for your home decor.</p>
+
+                <div class="size-grid">
+                    <div class="size-card">
+                        <h3 data-key="size.pottery.vases.title">Vase Size Guide</h3>
+                        <p data-key="size.pottery.vases.desc">Select the perfect vase size for your space and flowers.</p>
+                        <div class="table-responsive">
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th data-key="size.pottery.vases.size">Size</th>
+                                        <th data-key="size.pottery.vases.height">Height (cm)</th>
+                                        <th data-key="size.pottery.vases.best">Best For</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-key="size.pottery.vases.small">Small</td>
+                                        <td>15-25</td>
+                                        <td data-key="size.pottery.vases.small.best">Tabletops, small flowers</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.pottery.vases.medium">Medium</td>
+                                        <td>25-40</td>
+                                        <td data-key="size.pottery.vases.medium.best">Side tables, bouquets</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.pottery.vases.large">Large</td>
+                                        <td>40-60</td>
+                                        <td data-key="size.pottery.vases.large.best">Floor decor, large bouquets</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.pottery.vases.extra-large">Extra Large</td>
+                                        <td>60+</td>
+                                        <td data-key="size.pottery.vases.extra-large.best">Statement pieces, entryways</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="size-card">
+                        <h3 data-key="size.pottery.plates.title">Plate & Bowl Sizes</h3>
+                        <p data-key="size.pottery.plates.desc">Choose the right size for your dining and serving needs.</p>
+                        <div class="table-responsive">
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th data-key="size.pottery.plates.type">Type</th>
+                                        <th data-key="size.pottery.plates.diameter">Diameter (cm)</th>
+                                        <th data-key="size.pottery.plates.use">Use</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-key="size.pottery.plates.side">Side Plate</td>
+                                        <td>15-20</td>
+                                        <td data-key="size.pottery.plates.side.use">Bread, salad</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.pottery.plates.dinner">Dinner Plate</td>
+                                        <td>25-30</td>
+                                        <td data-key="size.pottery.plates.dinner.use">Main course</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.pottery.plates.serving">Serving Bowl</td>
+                                        <td>20-30</td>
+                                        <td data-key="size.pottery.plates.serving.use">Salad, pasta</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.pottery.plates.large-serving">Large Serving</td>
+                                        <td>30-40</td>
+                                        <td data-key="size.pottery.plates.large-serving.use">Family-style serving</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rugs Size Guide -->
+    <section class="size-section" id="rugs">
+        <div class="container">
+            <div class="size-content">
+                <h2 data-key="size.rugs.title">Rugs & Kilims Size Guide</h2>
+                <p data-key="size.rugs.intro">Choose the perfect rug size for your space.</p>
+
+                <div class="size-grid">
+                    <div class="size-card">
+                        <h3 data-key="size.rugs.standard">Standard Rug Sizes</h3>
+                        <p data-key="size.rugs.standard.desc">Common rug sizes for different rooms and purposes.</p>
+                        <div class="table-responsive">
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th data-key="size.rugs.size">Size</th>
+                                        <th data-key="size.rugs.dimensions">Dimensions (cm)</th>
+                                        <th data-key="size.rugs.best-for">Best For</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-key="size.rugs.small">Small</td>
+                                        <td>60 x 90</td>
+                                        <td data-key="size.rugs.small.best">Entryway, bathroom</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.rugs.medium">Medium</td>
+                                        <td>90 x 150</td>
+                                        <td data-key="size.rugs.medium.best">Kitchen, hallway</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.rugs.large">Large</td>
+                                        <td>150 x 200</td>
+                                        <td data-key="size.rugs.large.best">Living room, bedroom</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.rugs.extra-large">Extra Large</td>
+                                        <td>200 x 300</td>
+                                        <td data-key="size.rugs.extra-large.best">Large living rooms, dining rooms</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.rugs.runner">Runner</td>
+                                        <td>80 x 250</td>
+                                        <td data-key="size.rugs.runner.best">Hallways, corridors</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="size-card">
+                        <h3 data-key="size.rugs.placement">Room Placement Guide</h3>
+                        <p data-key="size.rugs.placement.desc">Tips for placing rugs in different rooms.</p>
+                        <div class="placement-tips">
+                            <div class="placement-item">
+                                <i class="fas fa-couch"></i>
+                                <div>
+                                    <h4 data-key="size.rugs.placement.living">Living Room</h4>
+                                    <p data-key="size.rugs.placement.living.desc">Rug should be large enough to fit under the front legs of all furniture.</p>
+                                </div>
+                            </div>
+                            <div class="placement-item">
+                                <i class="fas fa-bed"></i>
+                                <div>
+                                    <h4 data-key="size.rugs.placement.bedroom">Bedroom</h4>
+                                    <p data-key="size.rugs.placement.bedroom.desc">Rug should extend at least 60 cm beyond the sides and foot of the bed.</p>
+                                </div>
+                            </div>
+                            <div class="placement-item">
+                                <i class="fas fa-utensils"></i>
+                                <div>
+                                    <h4 data-key="size.rugs.placement.dining">Dining Room</h4>
+                                    <p data-key="size.rugs.placement.dining.desc">Rug should extend at least 60 cm beyond the table on all sides.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cotton Size Guide -->
+    <section class="size-section" id="cotton">
+        <div class="container">
+            <div class="size-content">
+                <h2 data-key="size.cotton.title">Egyptian Cotton Size Guide</h2>
+                <p data-key="size.cotton.intro">Find the perfect fit for cotton clothing, towels, and bedding.</p>
+
+                <div class="size-grid">
+                    <div class="size-card">
+                        <h3 data-key="size.cotton.clothing">Clothing Size Guide</h3>
+                        <p data-key="size.cotton.clothing.desc">Standard clothing sizes for Egyptian cotton garments.</p>
+                        <div class="table-responsive">
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th data-key="size.cotton.clothing.size">Size</th>
+                                        <th data-key="size.cotton.clothing.chest">Chest (cm)</th>
+                                        <th data-key="size.cotton.clothing.waist">Waist (cm)</th>
+                                        <th data-key="size.cotton.clothing.hip">Hip (cm)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>XS</td><td>86-90</td><td>66-70</td><td>90-94</td></tr>
+                                    <tr><td>S</td><td>90-94</td><td>70-74</td><td>94-98</td></tr>
+                                    <tr><td>M</td><td>94-98</td><td>74-78</td><td>98-102</td></tr>
+                                    <tr><td>L</td><td>98-102</td><td>78-82</td><td>102-106</td></tr>
+                                    <tr><td>XL</td><td>102-106</td><td>82-86</td><td>106-110</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="size-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-key="size.cotton.clothing.tip">Tip: 100% Egyptian cotton may shrink slightly after first wash.</span>
+                        </div>
+                    </div>
+
+                    <div class="size-card">
+                        <h3 data-key="size.cotton.towels">Towels & Bedding</h3>
+                        <p data-key="size.cotton.towels.desc">Standard sizes for Egyptian cotton towels and bedding.</p>
+                        <div class="table-responsive">
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th data-key="size.cotton.towels.type">Type</th>
+                                        <th data-key="size.cotton.towels.dimensions">Dimensions (cm)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-key="size.cotton.towels.hand">Hand Towel</td>
+                                        <td>50 x 90</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.cotton.towels.bath">Bath Towel</td>
+                                        <td>70 x 140</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.cotton.towels.bath-sheet">Bath Sheet</td>
+                                        <td>90 x 170</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.cotton.towels.queen">Queen Sheet</td>
+                                        <td>240 x 280</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-key="size.cotton.towels.king">King Sheet</td>
+                                        <td>280 x 320</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Measure Section -->
+    <section class="how-to-measure">
+        <div class="container">
+            <h2 class="section-title" data-key="size.how-to.title">How to Measure</h2>
+            <p class="section-subtitle" data-key="size.how-to.subtitle">Follow these simple steps to get accurate measurements</p>
+            
+            <div class="measure-grid">
+                <div class="measure-card">
+                    <div class="measure-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3 data-key="size.how-to.ring">Ring Size</h3>
+                    <ol>
+                        <li data-key="size.how-to.ring.step1">Wrap a strip of paper around your finger</li>
+                        <li data-key="size.how-to.ring.step2">Mark where the paper overlaps</li>
+                        <li data-key="size.how-to.ring.step3">Measure the length in millimeters</li>
+                        <li data-key="size.how-to.ring.step4">Use the chart to find your ring size</li>
+                    </ol>
+                </div>
+                
+                <div class="measure-card">
+                    <div class="measure-icon">
+                        <i class="fas fa-wrist"></i>
+                    </div>
+                    <h3 data-key="size.how-to.bracelet">Bracelet/Wrist</h3>
+                    <ol>
+                        <li data-key="size.how-to.bracelet.step1">Wrap a measuring tape around your wrist</li>
+                        <li data-key="size.how-to.bracelet.step2">Take the measurement where you'd wear the bracelet</li>
+                        <li data-key="size.how-to.bracelet.step3">Add 1-2 cm for a comfortable fit</li>
+                        <li data-key="size.how-to.bracelet.step4">Use the chart to find your bracelet size</li>
+                    </ol>
+                </div>
+                
+                <div class="measure-card">
+                    <div class="measure-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3 data-key="size.how-to.clothing">Clothing</h3>
+                    <ol>
+                        <li data-key="size.how-to.clothing.step1">Measure chest: around the fullest part</li>
+                        <li data-key="size.how-to.clothing.step2">Measure waist: around the narrowest part</li>
+                        <li data-key="size.how-to.clothing.step3">Measure hips: around the fullest part</li>
+                        <li data-key="size.how-to.clothing.step4">Compare with our size chart</li>
+                    </ol>
+                </div>
+                
+                <div class="measure-card">
+                    <div class="measure-icon">
+                        <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                    <h3 data-key="size.how-to.rug">Rugs</h3>
+                    <ol>
+                        <li data-key="size.how-to.rug.step1">Measure the length and width of your space</li>
+                        <li data-key="size.how-to.rug.step2">Consider furniture placement</li>
+                        <li data-key="size.how-to.rug.step3">Leave 30-60 cm of floor space around the rug</li>
+                        <li data-key="size.how-to.rug.step4">Choose the size that fits best</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="size-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-key="size.cta.title">Need More Help?</h2>
+                <p data-key="size.cta.desc">Our team is here to help you find the perfect size for your Egyptian handcrafts.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary" data-key="size.cta.contact">Contact Us</a>
+                    <a href="shop.html" class="btn btn-secondary" data-key="size.cta.shop">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SOUVENIR EGYPT</h3>
+                    <p data-key="footer.description">Bringing authentic Egyptian handcrafts to the world. Each piece tells a story of heritage, craftsmanship, and timeless beauty.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.shop">SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=jewelry" data-key="categories.jewelry">Jewelry</a></li>
+                        <li><a href="shop.html?category=pottery" data-key="categories.pottery">Pottery</a></li>
+                        <li><a href="shop.html?category=leather" data-key="categories.leather">Leather Products</a></li>
+                        <li><a href="shop.html?category=rugs" data-key="categories.rugs">Rugs & Kilims</a></li>
+                        <li><a href="shop.html?category=cotton" data-key="categories.cotton">Egyptian Cotton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.help">HELP</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping-info.html" data-key="footer.shipping">Shipping Information</a></li>
+                        <li><a href="returns.html" data-key="footer.returns">Returns & Exchanges</a></li>
+                        <li><a href="size-guide.html" data-key="footer.size">Size Guide</a></li>
+                        <li><a href="faq.html" data-key="footer.faq">FAQs</a></li>
+                        <li><a href="contact.html" data-key="footer.contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.contact">CONTACT</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+                        <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@souveniregypt.store</li>
+                    </ul>
+                    <h3 style="margin-top: 1.5rem;" data-key="footer.payment">PAYMENT METHODS</h3>
+                    <div class="payment-methods">
+                        <div class="payment-icon"><i class="fab fa-cc-visa"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-mastercard"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-paypal"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Souvenir Egypt.Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/language-switcher-size-guide.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/size-guide.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

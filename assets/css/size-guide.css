@@ -1,0 +1,520 @@
+/* size-guide.css - Size Guide page styles */
+
+/* Hero Section */
+.size-hero {
+    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-teal) 100%);
+    padding: 100px 0 60px;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.size-hero h1 {
+    font-size: 3rem;
+    color: var(--desert-gold);
+    margin-bottom: 1rem;
+}
+
+.size-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Size Navigation Tabs */
+.size-nav {
+    background: white;
+    border-bottom: 2px solid var(--sand-beige);
+    padding: 1rem 0;
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tab-btn:hover {
+    background: var(--sand-beige);
+    color: var(--dark-blue);
+}
+
+.tab-btn i {
+    color: var(--deep-teal);
+}
+
+.tab-btn.active {
+    background: var(--desert-gold);
+    color: var(--dark-blue);
+    border-color: var(--desert-gold);
+}
+
+.tab-btn.active i {
+    color: var(--dark-blue);
+}
+
+/* Size Sections */
+.size-section {
+    display: none;
+    padding: 60px 0;
+    background: white;
+}
+
+.size-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.size-content h2 {
+    color: var(--dark-blue);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.size-content > p {
+    color: #666;
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Size Grid */
+.size-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.size-card {
+    background: var(--sand-beige);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.size-card h3 {
+    color: var(--dark-blue);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.size-card > p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Tables */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.size-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.size-table thead {
+    background: var(--dark-blue);
+    color: white;
+}
+
+.size-table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.size-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.size-table tbody tr:hover {
+    background: rgba(215, 163, 74, 0.1);
+}
+
+.size-table tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* Size Tips */
+.size-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid var(--desert-gold);
+}
+
+.size-tip i {
+    color: var(--desert-gold);
+    font-size: 1.2rem;
+    margin-top: 0.15rem;
+}
+
+.size-tip span {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Necklace Guide */
+.necklace-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.necklace-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.necklace-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.necklace-visual {
+    flex: 0 0 60px;
+    position: relative;
+    border-left: 2px solid var(--desert-gold);
+}
+
+.necklace-line {
+    position: absolute;
+    left: -2px;
+    width: 40px;
+    height: 2px;
+    background: var(--desert-gold);
+    border-radius: 1px;
+}
+
+.necklace-line::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--desert-gold);
+}
+
+.necklace-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.necklace-name {
+    font-weight: 600;
+    color: var(--dark-blue);
+    font-size: 1.05rem;
+}
+
+.necklace-length {
+    color: var(--deep-teal);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.necklace-desc {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Placement Tips */
+.placement-tips {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.placement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.placement-item i {
+    font-size: 1.5rem;
+    color: var(--desert-gold);
+    flex-shrink: 0;
+}
+
+.placement-item h4 {
+    color: var(--dark-blue);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.placement-item p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* How to Measure Section */
+.how-to-measure {
+    padding: 80px 0;
+    background-color: var(--sand-beige);
+}
+
+.how-to-measure .section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.measure-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.measure-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.measure-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.measure-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--sand-beige);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: var(--desert-gold);
+}
+
+.measure-card h3 {
+    color: var(--dark-blue);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.measure-card ol {
+    text-align: left;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.measure-card ol li {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* CTA Section */
+.size-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-teal) 100%);
+    color: var(--text-light);
+    text-align: center;
+}
+
+.size-cta h2 {
+    font-size: 2.5rem;
+    color: var(--desert-gold);
+    margin-bottom: 1rem;
+}
+
+.size-cta p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .size-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .measure-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .size-hero {
+        padding: 80px 0 40px;
+    }
+    
+    .size-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .size-nav {
+        top: 60px;
+        padding: 0.75rem 0;
+    }
+    
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .tab-btn i {
+        display: none;
+    }
+    
+    .size-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .measure-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .size-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .size-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .size-hero p {
+        font-size: 1rem;
+    }
+    
+    .nav-tabs {
+        gap: 0.25rem;
+    }
+    
+    .tab-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .size-card {
+        padding: 1.5rem;
+    }
+    
+    .size-table {
+        font-size: 0.8rem;
+    }
+    
+    .size-table th,
+    .size-table td {
+        padding: 0.5rem;
+    }
+    
+    .measure-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .measure-card {
+        padding: 1.5rem;
+    }
+    
+    .necklace-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .necklace-visual {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 40px;
+        border-left: none;
+        border-bottom: 2px solid var(--desert-gold);
+    }
+    
+    .necklace-line {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+    }
+    
+    .necklace-line::after {
+        right: auto;
+        left: 100%;
+    }
+}

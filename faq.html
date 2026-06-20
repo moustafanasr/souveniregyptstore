@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - SOUVENIR Egyptian Handcrafts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/faq.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">SOUVENIR EGYPT.STORE</span>
+                    <span class="logo-subtitle">Authentic Handcrafts</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" data-key="nav.home" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" data-key="nav.collections" class="nav-link">Collections</a></li>
+                    <li><a href="artisans.html" data-key="nav.artisans" class="nav-link">Artisans</a></li>
+                    <li><a href="about.html" data-key="nav.about" class="nav-link">About</a></li>
+                    <li><a href="contact.html" data-key="nav.contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Language Switcher -->
+                <div class="language-switcher-dropdown">
+                    <button class="language-btn" id="languageToggle">
+                        <span class="current-lang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <button class="lang-option active" data-lang="en">
+                            <span class="lang-flag">🇺🇸</span>
+                            <span class="lang-text">English</span>
+                        </button>
+                        <button class="lang-option" data-lang="it">
+                            <span class="lang-flag">🇮🇹</span>
+                            <span class="lang-text">Italiano</span>
+                        </button>
+                        <button class="lang-option" data-lang="fr">
+                            <span class="lang-flag">🇫🇷</span>
+                            <span class="lang-text">Français</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- User Account -->
+                <div class="user-dropdown">
+                    <button class="user-btn" id="userToggle">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="user-menu" id="userMenu">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="user-details">
+                                <span class="user-name">Welcome Guest</span>
+                                <span class="user-status">Sign in to your account</span>
+                            </div>
+                        </div>
+                        <div class="user-actions">
+                            <a href="login.html" class="user-action-btn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span data-key="nav.login">Login</span>
+                            </a>
+                            <a href="register.html" class="user-action-btn">
+                                <i class="fas fa-user-plus"></i>
+                                <span data-key="nav.register">Register</span>
+                            </a>
+                            <a href="my-account.html" class="user-action-btn" style="display: none;" id="profileLink">
+                                <i class="fas fa-user-edit"></i>
+                                <span data-key="nav.profile">My Profile</span>
+                            </a>
+                            <a href="my-orders.html" class="user-action-btn" style="display: none;" id="ordersLink">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span data-key="nav.orders">My Orders</span>
+                            </a>
+                            <button class="user-action-btn logout-btn" style="display: none;" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span data-key="nav.logout">Logout</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shopping Cart -->
+                <div class="cart-dropdown">
+                    <button class="cart-btn" id="cartToggle">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <div class="cart-preview" id="cartPreview">
+                        <div class="cart-header">
+                            <h4 data-key="nav.cart">Shopping Cart</h4>
+                            <span class="cart-items-count">0 items</span>
+                        </div>
+                        <div class="cart-items" id="cartItems">
+                            <div class="empty-cart">
+                                <i class="fas fa-shopping-bag"></i>
+                                <p data-key="nav.emptyCart">Your cart is empty</p>
+                            </div>
+                        </div>
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                <span data-key="nav.total">Total:</span>
+                                <span class="total-amount">$0.00</span>
+                            </div>
+                            <div class="cart-actions">
+                                <a href="cart.html" class="btn btn-secondary" data-key="nav.viewCart">View Cart</a>
+                                <a href="checkout.html" class="btn btn-primary" data-key="nav.checkout">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FAQ Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-key="faq.hero.title">Frequently Asked Questions</h1>
+                <p data-key="faq.hero.subtitle">Find answers to the most common questions about our products, shipping, returns, and more.</p>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="faqSearch" placeholder="Search for answers..." data-key="faq.search.placeholder">
+                        <button id="searchBtn" aria-label="Search"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="faq-categories">
+        <div class="container">
+            <div class="categories-grid">
+                <button class="category-btn active" data-category="all" data-key="faq.categories.all">
+                    <i class="fas fa-th-list"></i> All Questions
+                </button>
+                <button class="category-btn" data-category="ordering" data-key="faq.categories.ordering">
+                    <i class="fas fa-shopping-cart"></i> Ordering
+                </button>
+                <button class="category-btn" data-category="shipping" data-key="faq.categories.shipping">
+                    <i class="fas fa-truck"></i> Shipping
+                </button>
+                <button class="category-btn" data-category="returns" data-key="faq.categories.returns">
+                    <i class="fas fa-undo"></i> Returns
+                </button>
+                <button class="category-btn" data-category="products" data-key="faq.categories.products">
+                    <i class="fas fa-gem"></i> Products
+                </button>
+                <button class="category-btn" data-category="account" data-key="faq.categories.account">
+                    <i class="fas fa-user"></i> Account
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-content">
+        <div class="container">
+            <div id="faqResults">
+                <!-- Ordering Questions -->
+                <div class="faq-category-section" data-category="ordering">
+                    <h2 data-key="faq.ordering.title">Ordering</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.ordering.q1">
+                                <span>How do I place an order?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.ordering.a1">
+                                <p>Placing an order is easy! Simply browse our collection, select the items you love, and add them to your cart. When you're ready, proceed to checkout, enter your shipping information, choose your payment method, and confirm your order. You'll receive a confirmation email once your order is placed.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.ordering.q2">
+                                <span>Can I change or cancel my order?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.ordering.a2">
+                                <p>If you need to change or cancel your order, please contact us immediately. Orders can be modified or canceled within 2 hours of placement. Once an order has been processed and shipped, changes may not be possible.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.ordering.q3">
+                                <span>What payment methods do you accept?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.ordering.a3">
+                                <p>We accept all major credit cards including Visa, MasterCard, and American Express. We also accept PayPal, Apple Pay, and bank transfers. All payments are processed securely through our encrypted payment gateway.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.ordering.q4">
+                                <span>Is my payment information secure?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.ordering.a4">
+                                <p>Yes, we take security very seriously. All payment information is encrypted using industry-standard SSL technology. We never store your credit card details on our servers. Payments are processed through trusted, PCI-compliant payment gateways.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shipping Questions -->
+                <div class="faq-category-section" data-category="shipping">
+                    <h2 data-key="faq.shipping.title">Shipping</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.shipping.q1">
+                                <span>How long does shipping take?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.shipping.a1">
+                                <p>Shipping times vary depending on your location and chosen shipping method. Hotel delivery in Egypt typically takes 24-48 hours. International shipping takes 5-10 business days, while express shipping takes 2-3 business days. You'll receive tracking information once your order ships.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.shipping.q2">
+                                <span>Do you ship internationally?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.shipping.a2">
+                                <p>Yes, we ship our authentic Egyptian handcrafts worldwide! We offer international shipping to over 50 countries. Delivery times and costs vary by destination. You can calculate shipping costs during checkout by entering your shipping address.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.shipping.q3">
+                                <span>How can I track my order?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.shipping.a3">
+                                <p>Once your order has been shipped, you'll receive a confirmation email with a tracking number. You can track your order by clicking the tracking link in the email or by visiting the carrier's website with your tracking number. You can also track your order in your account dashboard.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.shipping.q4">
+                                <span>Do you offer free shipping?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.shipping.a4">
+                                <p>We offer free hotel delivery for customers staying in Cairo, Alexandria, Luxor, and Aswan. For international orders, we offer free shipping on orders over $200. Express shipping is available for an additional fee.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Returns Questions -->
+                <div class="faq-category-section" data-category="returns">
+                    <h2 data-key="faq.returns.title">Returns & Exchanges</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.returns.q1">
+                                <span>What is your return policy?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.returns.a1">
+                                <p>We offer a 30-day return policy for all items in their original condition. Items must be unworn, unwashed, and with all original tags and packaging intact. Custom or personalized items cannot be returned unless damaged. Please visit our Returns & Exchanges page for full details.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.returns.q2">
+                                <span>How do I return an item?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.returns.a2">
+                                <p>To return an item, please contact our customer service team to initiate the return process. We'll provide you with a return authorization and instructions. Pack your item securely and ship it to our returns address using a trackable shipping method. You'll receive a refund once we receive and inspect your return.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.returns.q3">
+                                <span>How long does it take to process a refund?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.returns.a3">
+                                <p>Once we receive and inspect your return, we will process your refund within 5-7 business days. The refund will be credited to your original payment method. You'll receive a confirmation email once the refund has been processed.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.returns.q4">
+                                <span>Can I exchange an item?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.returns.a4">
+                                <p>Yes, you can exchange an item for a different size, color, or style. We recommend initiating a return and placing a new order to ensure the fastest processing time and availability of your desired item. Contact our customer service team for assistance with exchanges.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Questions -->
+                <div class="faq-category-section" data-category="products">
+                    <h2 data-key="faq.products.title">Products</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.products.q1">
+                                <span>Are your products authentic Egyptian handcrafts?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.products.a1">
+                                <p>Yes! All our products are authentic Egyptian handcrafts made by skilled local artisans. Each piece is handcrafted using traditional techniques passed down through generations. We work directly with artisans to ensure quality, authenticity, and fair compensation.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.products.q2">
+                                <span>What materials are used in your products?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.products.a2">
+                                <p>We use high-quality, natural materials in all our products. Our jewelry features sterling silver, gold, and semi-precious stones. Our leather goods are made from premium natural leather. Pottery is crafted from natural clay, and our textiles use 100% Egyptian cotton. All materials are sustainably sourced.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.products.q3">
+                                <span>Are your products handmade?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.products.a3">
+                                <p>Yes, every product we sell is handmade by skilled artisans. This means each piece is unique and may have slight variations in color, size, and finish. These variations are what make each piece special and authentic.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.products.q4">
+                                <span>Can I request a custom design?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.products.a4">
+                                <p>Yes, many of our artisans accept custom orders. Please contact us with your design idea, and we'll connect you with an artisan who can bring your vision to life. Custom orders typically take 2-4 weeks to complete depending on the complexity of the design.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Questions -->
+                <div class="faq-category-section" data-category="account">
+                    <h2 data-key="faq.account.title">Account</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.account.q1">
+                                <span>How do I create an account?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.account.a1">
+                                <p>Creating an account is quick and easy! Click the "Register" link in the header or visit our registration page. Enter your email address, choose a password, and fill in your basic information. You'll receive a confirmation email to verify your account.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.account.q2">
+                                <span>What are the benefits of creating an account?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.account.a2">
+                                <p>Creating an account allows you to track orders, save your shipping addresses for faster checkout, view order history, manage your profile, receive exclusive offers, and earn loyalty rewards. It also makes returns and exchanges easier to process.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.account.q3">
+                                <span>I forgot my password. What should I do?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.account.a3">
+                                <p>If you've forgotten your password, click the "Forgot Password" link on the login page. Enter your email address, and we'll send you a password reset link. Follow the instructions in the email to create a new password. If you don't receive the email, please check your spam folder.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-key="faq.account.q4">
+                                <span>How can I delete my account?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" data-key="faq.account.a4">
+                                <p>We're sorry to see you go! To delete your account, please contact our customer service team. They will guide you through the process and ensure all your personal data is removed from our systems. Please note that order history may be retained for legal purposes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3 data-key="faq.no-results.title">No Results Found</h3>
+                <p data-key="faq.no-results.desc">We couldn't find any questions matching your search. Try different keywords or browse the categories above.</p>
+                <button class="btn btn-primary clear-search" data-key="faq.no-results.clear">Clear Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions CTA -->
+    <section class="faq-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-key="faq.cta.title">Still Have Questions?</h2>
+                <p data-key="faq.cta.desc">Our friendly customer service team is ready to help you with any questions you may have.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary" data-key="faq.cta.contact">Contact Us</a>
+                    <a href="shipping-info.html" class="btn btn-secondary" data-key="faq.cta.shipping">Shipping Info</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SOUVENIR EGYPT</h3>
+                    <p data-key="footer.description">Bringing authentic Egyptian handcrafts to the world. Each piece tells a story of heritage, craftsmanship, and timeless beauty.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.shop">SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=jewelry" data-key="categories.jewelry">Jewelry</a></li>
+                        <li><a href="shop.html?category=pottery" data-key="categories.pottery">Pottery</a></li>
+                        <li><a href="shop.html?category=leather" data-key="categories.leather">Leather Products</a></li>
+                        <li><a href="shop.html?category=rugs" data-key="categories.rugs">Rugs & Kilims</a></li>
+                        <li><a href="shop.html?category=cotton" data-key="categories.cotton">Egyptian Cotton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.help">HELP</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping-info.html" data-key="footer.shipping">Shipping Information</a></li>
+                        <li><a href="returns.html" data-key="footer.returns">Returns & Exchanges</a></li>
+                        <li><a href="size-guide.html" data-key="footer.size">Size Guide</a></li>
+                        <li><a href="faq.html" data-key="footer.faq">FAQs</a></li>
+                        <li><a href="contact.html" data-key="footer.contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.contact">CONTACT</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+                        <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@souveniregypt.store</li>
+                    </ul>
+                    <h3 style="margin-top: 1.5rem;" data-key="footer.payment">PAYMENT METHODS</h3>
+                    <div class="payment-methods">
+                        <div class="payment-icon"><i class="fab fa-cc-visa"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-mastercard"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-paypal"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Souvenir Egypt.Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/language-switcher-faq.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/faq.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
