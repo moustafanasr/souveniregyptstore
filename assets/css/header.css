@@ -24,24 +24,45 @@ header {
 .logo a {
     text-decoration: none;
     display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* Logo Image */
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Logo Text Container */
+.logo-text-wrapper {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .logo-text {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--desert-gold);
-    line-height: 1;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
 }
 
 .logo-subtitle {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: var(--sand-beige);
     font-weight: 300;
-    letter-spacing: 1px;
-    margin-top: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* Main Navigation */
@@ -530,6 +551,10 @@ header {
 
 /* RTL Support */
 [dir="rtl"] .logo a {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .logo-text-wrapper {
     align-items: flex-end;
 }
 
@@ -568,8 +593,12 @@ header {
         gap: 1.5rem;
     }
     
+    .logo img {
+        height: 38px;
+    }
+    
     .logo-text {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -625,6 +654,23 @@ header {
         order: 1;
         flex: 1;
     }
+    
+    .logo a {
+        gap: 0.5rem;
+    }
+    
+    .logo img {
+        height: 32px;
+    }
+    
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.5rem;
+        letter-spacing: 1px;
+    }
 
     .header-actions {
         order: 2;
@@ -658,12 +704,21 @@ header {
 }
 
 @media (max-width: 480px) {
-    .logo-text {
-        font-size: 1.4rem;
+    .logo img {
+        height: 28px;
     }
-
+    
+    .logo-text {
+        font-size: 0.95rem;
+    }
+    
     .logo-subtitle {
-        font-size: 0.6rem;
+        font-size: 0.45rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .logo a {
+        gap: 0.4rem;
     }
 
     .cart-preview {
@@ -680,7 +735,6 @@ header {
         min-width: 250px;
     }
 }
-
 
 /* Cart Quantity Controls */
 .cart-item-meta {

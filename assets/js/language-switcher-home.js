@@ -22,12 +22,29 @@ const translations = {
         "nav.logout": "Logout",
         
         // Hero Section
-        "hero.subtitle": "SHOP AUTHENTIC",
-        "hero.title": "Egyptian Handcrafts",
-        "hero.tagline": "SOUVENIR, AUTHENTIC Egyptian Handcraft",
+        "hero.badge": "✨ Authentic Egyptian Handcrafts",
+        "hero.title": "Discover the Soul of Egypt",
         "hero.description": "Bring a piece of authentic Egyptian Handcraft to your home. Handmade with love by Egyptian artisans.",
+        "hero.stat.products": "Handcrafted Products",
+        "hero.stat.artisans": "Master Artisans",
+        "hero.stat.countries": "Countries Worldwide",
         "hero.shop": "SHOP NOW",
         "hero.artisans": "MEET THE ARTISANS",
+        
+        // Best Sellers
+        "bestsellers.title": "⭐ Best Sellers",
+        "bestsellers.subtitle": "Our most loved handcrafted pieces, chosen by customers like you",
+        "bestsellers.view-all": "View All Products →",
+        
+        // Why Us
+        "whyus.title": "Why Choose Souvenir Egypt",
+        "whyus.subtitle": "Three reasons why thousands trust us for authentic Egyptian handcrafts",
+        "whyus.authentic.title": "100% Authentic Handcrafts",
+        "whyus.authentic.desc": "Every piece is handcrafted by skilled Egyptian artisans using traditional techniques passed down through generations. No mass production, no machines — just pure craftsmanship.",
+        "whyus.trust.title": "Trusted & Guaranteed",
+        "whyus.trust.desc": "We stand behind every product we sell. With our satisfaction guarantee and secure payment options, you can shop with confidence knowing your purchase is protected.",
+        "whyus.shipping.title": "Worldwide Shipping",
+        "whyus.shipping.desc": "Whether you're visiting Egypt or ordering from home, we deliver our treasures to your doorstep. Enjoy fast, reliable shipping with real-time tracking.",
         
         // Categories
         "categories.title": "Our Collections",
@@ -108,12 +125,29 @@ const translations = {
         "nav.logout": "Esci",
         
         // Hero Section
-        "hero.subtitle": "ACQUISTA AUTENTICO",
-        "hero.title": "Artigianato Egiziano",
-        "hero.tagline": "SOUVENIR, AUTENTICO Artigianato Egiziano",
+        "hero.badge": "✨ Autentico Artigianato Egiziano",
+        "hero.title": "Scopri l'Anima dell'Egitto",
         "hero.description": "Porta a casa un pezzo di autentico artigianato egiziano. Realizzato a mano con amore dagli artigiani egiziani.",
+        "hero.stat.products": "Prodotti Artigianali",
+        "hero.stat.artisans": "Artigiani Maestri",
+        "hero.stat.countries": "Paesi in tutto il Mondo",
         "hero.shop": "ACQUISTA ORA",
         "hero.artisans": "INCONTRA GLI ARTIGIANI",
+        
+        // Best Sellers
+        "bestsellers.title": "⭐ Più Venduti",
+        "bestsellers.subtitle": "I nostri pezzi artigianali più amati, scelti da clienti come te",
+        "bestsellers.view-all": "Vedi Tutti i Prodotti →",
+        
+        // Why Us
+        "whyus.title": "Perché Scegliere Souvenir Egypt",
+        "whyus.subtitle": "Tre motivi per cui migliaia di persone si fidano di noi per l'artigianato egiziano autentico",
+        "whyus.authentic.title": "Artigianato 100% Autentico",
+        "whyus.authentic.desc": "Ogni pezzo è realizzato a mano da abili artigiani egiziani utilizzando tecniche tradizionali tramandate di generazione in generazione. Niente produzione di massa, niente macchine — solo pura artigianalità.",
+        "whyus.trust.title": "Fiducia e Garanzia",
+        "whyus.trust.desc": "Sosteniamo ogni prodotto che vendiamo. Con la nostra garanzia di soddisfazione e le opzioni di pagamento sicure, puoi fare acquisti con fiducia sapendo che il tuo acquisto è protetto.",
+        "whyus.shipping.title": "Spedizione Mondiale",
+        "whyus.shipping.desc": "Che tu stia visitando l'Egitto o ordinando da casa, consegniamo i nostri tesori direttamente a casa tua. Goditi una spedizione veloce e affidabile con tracciamento in tempo reale.",
         
         // Categories
         "categories.title": "Le Nostre Collezioni",
@@ -194,12 +228,29 @@ const translations = {
         "nav.logout": "Déconnexion",
         
         // Hero Section
-        "hero.subtitle": "ACHETEZ AUTHENTIQUE",
-        "hero.title": "Artisanat Égyptien",
-        "hero.tagline": "SOUVENIR, AUTHENTIQUE Artisanat Égyptien",
+        "hero.badge": "✨ Artisanat Égyptien Authentique",
+        "hero.title": "Découvrez l'Âme de l'Égypte",
         "hero.description": "Apportez une pièce d'artisanat égyptien authentique chez vous. Fait main avec amour par des artisans égyptiens.",
+        "hero.stat.products": "Produits Artisanaux",
+        "hero.stat.artisans": "Artisans Maîtres",
+        "hero.stat.countries": "Pays dans le Monde",
         "hero.shop": "ACHETEZ MAINTENANT",
         "hero.artisans": "RENCONTREZ LES ARTISANS",
+        
+        // Best Sellers
+        "bestsellers.title": "⭐ Meilleures Ventes",
+        "bestsellers.subtitle": "Nos pièces artisanales les plus aimées, choisies par des clients comme vous",
+        "bestsellers.view-all": "Voir Tous les Produits →",
+        
+        // Why Us
+        "whyus.title": "Pourquoi Choisir Souvenir Egypt",
+        "whyus.subtitle": "Trois raisons pour lesquelles des milliers de personnes nous font confiance pour l'artisanat égyptien authentique",
+        "whyus.authentic.title": "Artisanat 100% Authentique",
+        "whyus.authentic.desc": "Chaque pièce est fabriquée à la main par des artisans égyptiens qualifiés utilisant des techniques traditionnelles transmises de génération en génération. Pas de production de masse, pas de machines — seulement un pur artisanat.",
+        "whyus.trust.title": "Confiabilité & Garantie",
+        "whyus.trust.desc": "Nous soutenons chaque produit que nous vendons. Avec notre garantie de satisfaction et nos options de paiement sécurisées, vous pouvez acheter en toute confiance, sachant que votre achat est protégé.",
+        "whyus.shipping.title": "Livraison Mondiale",
+        "whyus.shipping.desc": "Que vous visitiez l'Égypte ou que vous commandiez depuis chez vous, nous livrons nos trésors à votre porte. Profitez d'une livraison rapide et fiable avec un suivi en temps réel.",
         
         // Categories
         "categories.title": "Nos Collections",
@@ -280,12 +331,29 @@ const translations = {
         "nav.logout": "تسجيل الخروج",
         
         // Hero Section
-        "hero.subtitle": "تسوق الأصالة",
-        "hero.title": "الحرف اليدوية المصرية",
-        "hero.tagline": "سوفينير، الحرف اليدوية المصرية الأصيلة",
+        "hero.badge": "✨ الحرف اليدوية المصرية الأصيلة",
+        "hero.title": "اكتشف روح مصر",
         "hero.description": "احضر قطعة من الحرف اليدوية المصرية الأصيلة إلى منزلك. مصنوعة يدوياً بحب من قبل الحرفيين المصريين.",
+        "hero.stat.products": "منتجات حرفية",
+        "hero.stat.artisans": "حرفيين مبدعين",
+        "hero.stat.countries": "دولة حول العالم",
         "hero.shop": "تسوق الآن",
         "hero.artisans": "تعرف على الحرفيين",
+        
+        // Best Sellers
+        "bestsellers.title": "⭐ الأكثر مبيعاً",
+        "bestsellers.subtitle": "أكثر القطع الحرفية المحبوبة، التي اختارها عملاء مثلك",
+        "bestsellers.view-all": "عرض جميع المنتجات ←",
+        
+        // Why Us
+        "whyus.title": "لماذا تختار سوفينير مصر",
+        "whyus.subtitle": "ثلاثة أسباب تجعل الآلاف يثقون بنا للحصول على الحرف اليدوية المصرية الأصيلة",
+        "whyus.authentic.title": "حرف يدوية أصلية 100%",
+        "whyus.authentic.desc": "كل قطعة مصنوعة يدوياً بواسطة حرفيين مصريين ماهرين باستخدام تقنيات تقليدية توارثتها الأجيال. لا إنتاج ضخم، ولا آلات — فقط حرفية خالصة.",
+        "whyus.trust.title": "موثوق ومضمون",
+        "whyus.trust.desc": "نقف خلف كل منتج نبيعه. مع ضمان الرضا وخيارات الدفع الآمنة، يمكنك التسوق بثقة مع العلم أن مشترياتك محمية.",
+        "whyus.shipping.title": "شحن حول العالم",
+        "whyus.shipping.desc": "سواء كنت تزور مصر أو تطلب من المنزل، نقوم بتوصيل كنوزنا إلى عتبة داركم. استمتع بشحن سريع وموثوق مع تتبع فوري.",
         
         // Categories
         "categories.title": "مجموعاتنا",
@@ -445,93 +513,12 @@ function updateTextDirection(lang) {
 
 function updateDynamicContent() {
     // Update any dynamic content specific to home page
-    // This can be expanded based on home page specific needs
     updateHomeSpecificContent();
 }
 
 function updateHomeSpecificContent() {
-    // Update any home page specific dynamic content
-    // For example: featured products, testimonials, etc.
-    // This function can be expanded as needed
+    // Any home page specific dynamic content updates
 }
-
-// // Setup dropdown functionality
-// function setupDropdownFunctionality() {
-//     const languageToggle = document.getElementById('languageToggle');
-//     const languageDropdown = document.getElementById('languageDropdown');
-
-//     if (languageToggle && languageDropdown) {
-//         languageToggle.addEventListener('click', (e) => {
-//             e.stopPropagation();
-//             const isShowing = languageDropdown.classList.contains('show');
-            
-//             // Close all other dropdowns first
-//             closeAllDropdowns();
-            
-//             if (!isShowing) {
-//                 languageDropdown.classList.add('show');
-//                 // Update chevron icon
-//                 const chevron = languageToggle.querySelector('.fa-chevron-down');
-//                 if (chevron) {
-//                     chevron.style.transform = 'rotate(180deg)';
-//                 }
-//             }
-//         });
-
-//         // Handle language selection
-//         document.querySelectorAll('.lang-option').forEach(option => {
-//             option.addEventListener('click', (e) => {
-//                 e.stopPropagation();
-//                 const lang = option.dataset.lang;
-//                 switchLanguage(lang);
-//                 closeLanguageDropdown();
-//             });
-//         });
-
-//         // Close dropdown when clicking outside
-//         document.addEventListener('click', (e) => {
-//             if (!e.target.closest('.language-switcher-dropdown')) {
-//                 closeLanguageDropdown();
-//             }
-//         });
-
-//         // Close dropdown on escape key
-//         document.addEventListener('keydown', (e) => {
-//             if (e.key === 'Escape') {
-//                 closeLanguageDropdown();
-//             }
-//         });
-//     }
-// }
-
-// // Close language dropdown
-// function closeLanguageDropdown() {
-//     const languageDropdown = document.getElementById('languageDropdown');
-//     const languageToggle = document.getElementById('languageToggle');
-    
-//     if (languageDropdown) {
-//         languageDropdown.classList.remove('show');
-//     }
-    
-//     if (languageToggle) {
-//         const chevron = languageToggle.querySelector('.fa-chevron-down');
-//         if (chevron) {
-//             chevron.style.transform = 'rotate(0deg)';
-//         }
-//     }
-// }
-
-// // Close all dropdowns
-// function closeAllDropdowns() {
-//     closeLanguageDropdown();
-    
-//     // Close other dropdowns if they exist
-//     const userMenu = document.getElementById('userMenu');
-//     const cartPreview = document.getElementById('cartPreview');
-    
-//     if (userMenu) userMenu.classList.remove('show');
-//     if (cartPreview) cartPreview.classList.remove('show');
-// }
 
 // Initialize language switcher
 document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -634,6 +621,28 @@ function addRTLStyles() {
             }
         `;
         document.head.appendChild(styles);
+    }
+}
+
+// Setup dropdown functionality
+function setupDropdownFunctionality() {
+    const languageToggle = document.getElementById('languageToggle');
+    const languageDropdown = document.getElementById('languageDropdown');
+
+    if (languageToggle && languageDropdown) {
+        languageToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('show');
+        });
+
+        document.querySelectorAll('.lang-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const lang = option.dataset.lang;
+                switchLanguage(lang);
+                languageDropdown.classList.remove('show');
+            });
+        });
     }
 }
 
